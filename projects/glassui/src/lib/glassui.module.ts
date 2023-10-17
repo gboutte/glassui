@@ -1,5 +1,6 @@
 import { NgModule } from '@angular/core';
 import {ButtonsModule} from "./buttons/buttons.module";
+import {NavigationModule} from "./navigation/navigation.module";
 
 
 
@@ -8,9 +9,11 @@ import {ButtonsModule} from "./buttons/buttons.module";
   ],
   imports: [
     ButtonsModule,
+    NavigationModule,
   ],
   exports: [
     ButtonsModule,
+    NavigationModule,
   ]
 })
 export class GlassuiModule { }

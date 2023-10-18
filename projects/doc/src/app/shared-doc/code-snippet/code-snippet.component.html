@@ -1,0 +1,16 @@
+<button class="action-button show-code" (click)="showCode = !showCode">Show code</button>
+<div class="example-run" *ngIf="!showCode">
+  <ng-content></ng-content>
+</div>
+<div class="example-source" *ngIf="showCode">
+  <div class="example-tabs">
+    <button class="action-button" *ngFor="let file of files" [class.active]="currentCodeTab===file" (click)="currentCodeTab=file">{{file}}</button>
+  </div>
+  <div class="example-code" *ngFor="let file of files" [class.active]="currentCodeTab===file">
+    {{getFilename(file)}}
+    <ng-template [ngIf]="filesContent[file]">
+      <pre>{{filesContent[file]}}</pre>
+    </ng-template>
+  </div>
+</div>
+

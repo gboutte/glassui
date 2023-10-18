@@ -4,4 +4,27 @@ body{
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
+  background-attachment: fixed;
+  height: 100%;
+}
+
+:root{
+  //https://flatuicolors.com/palette/ca
+  --color-pink:#ff9ff3;
+  --color-darkpink:#f368e0;
+  --color-yellow:#feca57;
+  --color-orange: #ff9f43;
+  --color-red:#ff6b6b;
+  --color-darkred:#ee5253;
+    --color-green:#1dd1a1;
+  --color-darkgreen:#10ac84;
+  --color-black:#222f3e;
+  --color-darkgray:#576574;
+  --color-gray:#8395a7;
+  --color-lightgray:#c8d6e5;
+
+}
+*{
+  font-family: Arial, Helvetica, sans-serif;
+  box-sizing: border-box;
 }

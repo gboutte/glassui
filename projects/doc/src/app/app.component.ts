@@ -24,6 +24,10 @@ export class AppComponent {
     {
       label: 'Navigation',
       link: '/navigation',
+    },
+    {
+      label: 'Content',
+      link: '/content',
     }
   ]
 }

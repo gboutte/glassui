@@ -50,7 +50,7 @@
       },
       "root": "projects/doc",
       "sourceRoot": "projects/doc/src",
-      "prefix": "app",
+      "prefix": "gd",
       "architect": {
         "build": {
           "builder": "@angular-devkit/build-angular:browser",
@@ -65,7 +65,12 @@
             "inlineStyleLanguage": "scss",
             "assets": [
               "projects/doc/src/favicon.ico",
-              "projects/doc/src/assets"
+              "projects/doc/src/assets",
+              {
+                "glob": "**/*",
+                "input": "./projects/doc/src/app/components-examples/",
+                "output": "/docs-content"
+              }
             ],
             "styles": [
               "projects/doc/src/styles.scss"

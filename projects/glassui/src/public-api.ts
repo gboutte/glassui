@@ -10,6 +10,9 @@ export * from './lib/buttons/button/button.component';
 
 //Navigation
 export * from './lib/navigation/navigation.module';
+export * from './lib/navigation/sidebar/sidebar.component';
+export * from './lib/navigation/navbar/navbar.component';
+export * from './lib/navigation/page/page.component';
 
 
 //Content

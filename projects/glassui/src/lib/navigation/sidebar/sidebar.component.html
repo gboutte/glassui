@@ -1,6 +1,15 @@
-<div class="menu-content">
-  <ng-content></ng-content>
-  <ng-template [ngIf]="menu.length > 0">
-    <gl-button *ngFor="let bu of menu" [routerLink]="bu.link" [class.active]="isActivated(bu)">{{bu.label}}</gl-button>
-  </ng-template>
+<div class="sidebar" [class.hasNavbar]="navigationStore.hasNavbar">
+  <gl-card>
+
+    <div class="menu-content">
+      <ng-content></ng-content>
+      <ng-template [ngIf]="menu.length > 0">
+        <gl-button *ngFor="let bu of menu" [routerLink]="bu.link"
+                   [class.active]="isActivated(bu)">{{bu.label}}</gl-button>
+      </ng-template>
+    </div>
+
+  </gl-card>
+
+
 </div>

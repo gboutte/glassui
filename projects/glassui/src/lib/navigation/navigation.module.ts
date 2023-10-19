@@ -1,24 +1,29 @@
 import {NgModule} from '@angular/core';
 import {CommonModule} from '@angular/common';
 import {SidebarComponent} from './sidebar/sidebar.component';
-import { SidebarPageComponent } from './sidebar-page/sidebar-page.component';
 import {ButtonsModule} from "../buttons/buttons.module";
 import {RouterLink} from "@angular/router";
+import { NavbarComponent } from './navbar/navbar.component';
+import {ContentModule} from "../content/content.module";
+import { PageComponent } from './page/page.component';
 
 
 @NgModule({
   declarations: [
     SidebarComponent,
-    SidebarPageComponent
+    NavbarComponent,
+    PageComponent,
   ],
   imports: [
     CommonModule,
     ButtonsModule,
-    RouterLink
+    RouterLink,
+    ContentModule
   ],
   exports: [
     SidebarComponent,
-    SidebarPageComponent,
+    NavbarComponent,
+    PageComponent,
   ]
 })
 export class NavigationModule {

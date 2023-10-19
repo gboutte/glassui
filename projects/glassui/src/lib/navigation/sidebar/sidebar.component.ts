@@ -1,6 +1,6 @@
 import {Component, Input, OnDestroy, OnInit} from '@angular/core';
 import {MenuModel} from "./menu.model";
-import {ActivatedRoute} from "@angular/router";
+import {ActivatedRoute, NavigationEnd, Router} from "@angular/router";
 import {NavigationStore} from "../navigation.store";
 
 @Component({
@@ -12,10 +12,14 @@ export class SidebarComponent implements OnInit,OnDestroy{
 
   @Input() menu: MenuModel[] = []
   navigationStore: NavigationStore;
-  constructor(navigationStore: NavigationStore) {
+  constructor(navigationStore: NavigationStore,private router: Router) {
     this.navigationStore = navigationStore;
+    router.events.subscribe((val) => {
+      if(val instanceof NavigationEnd){
+        this.navigationStore.showMenu = false;
+      }
+    });
   }
-
   isActivated(menu: MenuModel) {
    return window.location.pathname.startsWith(menu.link);
   }

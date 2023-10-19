@@ -8,7 +8,10 @@ body{
   background-attachment: fixed;
   height: 100%;
 }
-
+body{
+  margin: 0;
+  padding: 0;
+}
 :root{
   //https://flatuicolors.com/palette/ca
   --color-pink:#ff9ff3;

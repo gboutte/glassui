@@ -1,8 +1,10 @@
-.hasNavbar{
-  margin-top: 70px;
-
-}
-.hasSidebar{
-  margin-left: 200px;
+.page{
+  margin:5px;
+  &.hasNavbar{
+    margin-top: 70px;
+  }
+  &.hasSidebar{
+    margin-left: 210px;
+  }
 
 }

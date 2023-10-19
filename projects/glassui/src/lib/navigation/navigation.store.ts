@@ -6,4 +6,5 @@ import {Injectable} from "@angular/core";
 export class NavigationStore{
   hasNavbar = false;
   hasSidebar = false;
+  showMenu = false;
 }

@@ -1,6 +1,5 @@
 :host {
 
-
   .sidebar {
     height: calc(100% - 10px);
     width: 210px;
@@ -9,11 +8,13 @@
     left: 0;
     padding: 5px;
     z-index: 1000;
-    &.hasNavbar{
-      margin-top:70px;
+
+    &.hasNavbar {
+      margin-top: 70px;
       height: calc(100% - 70px);
       padding-top: 0;
     }
+
     ::ng-deep {
       .card {
         height: 100%;
@@ -44,6 +45,18 @@
           background-color: rgba(255, 255, 255, 0.75);
         }
       }
+    }
+  }
+}
+
+@media (max-width: 768px) {
+  :host {
+
+    .sidebar {
+      &:not(.showMobile) {
+        display: none;
+      }
+      width: 100%;
     }
   }
 }

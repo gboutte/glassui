@@ -8,3 +8,15 @@
   }
 
 }
+
+
+@media (max-width: 768px){
+  .page{
+    &.hasSidebar{
+      margin-left: 5px;
+    }
+    &.menuMobileOpen{
+      display: none;
+    }
+  }
+}

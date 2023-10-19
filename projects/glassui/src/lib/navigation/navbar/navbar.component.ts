@@ -20,4 +20,8 @@ export class NavbarComponent implements OnInit, OnDestroy{
   ngOnDestroy() {
     this.navigationStore.hasNavbar = false;
   }
+
+  showMenu() {
+    this.navigationStore.showMenu = !this.navigationStore.showMenu;
+  }
 }

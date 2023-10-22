@@ -4,6 +4,7 @@ import {ButtonsExampleComponent} from './buttons/buttons-example/buttons-example
 import {GlassuiModule} from "../../../../glassui/src/lib/glassui.module";
 import { CardsColorExampleComponent } from './content/card/cards-color-example/cards-color-example.component';
 import { CardsTransparencyExampleComponent } from './content/card/cards-transparency-example/cards-transparency-example.component';
+import { CardsBlurExampleComponent } from './content/card/cards-blur-example/cards-blur-example.component';
 
 
 @NgModule({
@@ -11,11 +12,13 @@ import { CardsTransparencyExampleComponent } from './content/card/cards-transpar
     ButtonsExampleComponent,
     CardsColorExampleComponent,
     CardsTransparencyExampleComponent,
+    CardsBlurExampleComponent,
   ],
   exports: [
     ButtonsExampleComponent,
     CardsColorExampleComponent,
     CardsTransparencyExampleComponent,
+    CardsBlurExampleComponent,
   ],
   imports: [
     CommonModule,

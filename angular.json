@@ -73,7 +73,8 @@
               }
             ],
             "styles": [
-              "projects/doc/src/styles.scss"
+              "projects/doc/src/styles.scss",
+              "projects/glassui/src/assets/theme.scss"
             ],
             "scripts": []
           },

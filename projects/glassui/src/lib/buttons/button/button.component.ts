@@ -1,4 +1,5 @@
-import { Component } from '@angular/core';
+import {Component, Input} from '@angular/core';
+import {Color} from "../../shared/color.type";
 
 @Component({
   selector: 'gl-button',
@@ -7,4 +8,5 @@ import { Component } from '@angular/core';
 })
 export class ButtonComponent {
 
+  @Input() color:Color = "white";
 }

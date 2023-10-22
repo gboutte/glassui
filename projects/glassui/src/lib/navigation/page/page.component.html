@@ -1,3 +1,3 @@
-<div class="page" [class.hasNavbar]="navigationStore.hasNavbar" [class.hasSidebar]="navigationStore.hasSidebar" [class.menuMobileOpen]="navigationStore.showMenu">
+<div class="page" [class.hasNavbar]="navigationStore.hasNavbar(key)" [class.hasSidebar]="navigationStore.hasSidebar(key)" [class.menuMobileOpen]="navigationStore.showMenu(key)">
   <ng-content></ng-content>
 </div>

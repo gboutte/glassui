@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import {Component, Input} from '@angular/core';
 import {NavigationStore} from "../navigation.store";
 
 @Component({
@@ -8,6 +8,7 @@ import {NavigationStore} from "../navigation.store";
 })
 export class PageComponent {
   navigationStore:NavigationStore;
+  @Input() key: string = 'default';
   constructor(navigationStore:NavigationStore) {
     this.navigationStore = navigationStore;
   }

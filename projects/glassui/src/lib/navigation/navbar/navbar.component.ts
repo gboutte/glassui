@@ -1,4 +1,4 @@
-import {Component, OnDestroy, OnInit} from '@angular/core';
+import {Component, Input, OnDestroy, OnInit} from '@angular/core';
 import {NavigationStore} from "../navigation.store";
 
 @Component({
@@ -6,22 +6,24 @@ import {NavigationStore} from "../navigation.store";
   templateUrl: './navbar.component.html',
   styleUrls: ['./navbar.component.scss']
 })
-export class NavbarComponent implements OnInit, OnDestroy{
+export class NavbarComponent implements OnInit, OnDestroy {
   navigationStore: NavigationStore;
+  @Input() key: string = 'default';
 
   constructor(navigationStore: NavigationStore) {
     this.navigationStore = navigationStore;
   }
 
   ngOnInit() {
-    this.navigationStore.hasNavbar = true;
+    this.navigationStore.setNavbar(true, this.key);
   }
 
   ngOnDestroy() {
-    this.navigationStore.hasNavbar = false;
+    this.navigationStore.setNavbar(false, this.key);
   }
 
   showMenu() {
-    this.navigationStore.showMenu = !this.navigationStore.showMenu;
+    // this.navigationStore.showMenu = !this.navigationStore.showMenu;
+    this.navigationStore.setShowMenu(!this.navigationStore.showMenu(this.key), this.key);
   }
 }

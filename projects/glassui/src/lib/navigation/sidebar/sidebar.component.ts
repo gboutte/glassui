@@ -11,12 +11,13 @@ import {NavigationStore} from "../navigation.store";
 export class SidebarComponent implements OnInit,OnDestroy{
 
   @Input() menu: MenuModel[] = []
+  @Input() key: string = 'default';
   navigationStore: NavigationStore;
   constructor(navigationStore: NavigationStore,private router: Router) {
     this.navigationStore = navigationStore;
     router.events.subscribe((val) => {
       if(val instanceof NavigationEnd){
-        this.navigationStore.showMenu = false;
+        this.navigationStore.setShowMenu(false, this.key)
       }
     });
   }
@@ -24,9 +25,9 @@ export class SidebarComponent implements OnInit,OnDestroy{
    return window.location.pathname.startsWith(menu.link);
   }
   ngOnInit() {
-    this.navigationStore.hasSidebar = true;
+    this.navigationStore.setSidebar(true, this.key);
   }
   ngOnDestroy() {
-    this.navigationStore.hasSidebar = false;
+    this.navigationStore.setSidebar(false, this.key);
   }
 }

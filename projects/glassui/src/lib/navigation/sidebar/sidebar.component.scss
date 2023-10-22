@@ -3,16 +3,16 @@
   .sidebar {
     height: calc(100% - 10px);
     width: 210px;
-    position: fixed;
-    top: 0;
+    position: sticky;
+    float: left;
+    top: 5px;
     left: 0;
-    padding: 5px;
     z-index: 1000;
+    padding: 0 5px 5px;
 
     &.hasNavbar {
-      margin-top: 70px;
+      top: 70px;
       height: calc(100% - 70px);
-      padding-top: 0;
     }
 
     ::ng-deep {

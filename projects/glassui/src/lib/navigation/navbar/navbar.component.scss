@@ -1,11 +1,12 @@
 :host {
-  position: fixed;
+  position: sticky;
   top: 0;
   left: 0;
   width: 100%;
   height: 70px;
   box-sizing: border-box;
   z-index: 1000;
+  display: inline-block;
 
   .navbar {
     box-sizing: border-box;

@@ -9,4 +9,8 @@ import {Color} from "../../shared/color.type";
 export class ButtonComponent {
 
   @Input() color:Color = "white";
+
+  getClasses() {
+    return `${this.color}`;
+  }
 }

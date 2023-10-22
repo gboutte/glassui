@@ -4,6 +4,9 @@
 
 :root{
 
+  // FONT
+  --font-family: 'Roboto', sans-serif;
+
   //COLORS
   --color-white: 255, 255, 255;
   --color-white-25: rgba(var(--color-white), 0.25);
@@ -57,7 +60,7 @@
   --blur-small: blur( 4px );
   --blur-medium: blur( 8px );
   --blur-big: blur( 12px );
-  --blur-bigger: blur( 16px );
+  --blur-biger: blur( 16px );
 
   // RADIUS
   --radius-simple: 10px;

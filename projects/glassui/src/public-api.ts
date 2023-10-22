@@ -19,3 +19,8 @@ export * from './lib/navigation/page/page.component';
 export * from './lib/content/content.module';
 export * from './lib/content/card/card.component';
 
+//Forms
+export * from './lib/forms/forms.module';
+//inputs
+export * from './lib/forms/inputs/inputs.module';
+

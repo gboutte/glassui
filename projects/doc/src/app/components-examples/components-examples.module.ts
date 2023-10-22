@@ -8,6 +8,8 @@ import { CardsBlurExampleComponent } from './content/card/cards-blur-example/car
 import { SidebarExampleComponent } from './navigation/sidebar-example/sidebar-example.component';
 import { NavbarExampleComponent } from './navigation/navbar-example/navbar-example.component';
 import { NavbarSidebarExampleComponent } from './navigation/navbar-sidebar-example/navbar-sidebar-example.component';
+import { InputExampleComponent } from './forms/inputs/input-example/input-example.component';
+import {FormsModule} from "@angular/forms";
 
 
 @NgModule({
@@ -19,6 +21,7 @@ import { NavbarSidebarExampleComponent } from './navigation/navbar-sidebar-examp
     SidebarExampleComponent,
     NavbarExampleComponent,
     NavbarSidebarExampleComponent,
+    InputExampleComponent,
   ],
   exports: [
     ButtonsExampleComponent,
@@ -28,11 +31,13 @@ import { NavbarSidebarExampleComponent } from './navigation/navbar-sidebar-examp
     SidebarExampleComponent,
     NavbarExampleComponent,
     NavbarSidebarExampleComponent,
+    InputExampleComponent,
   ],
-  imports: [
-    CommonModule,
-    GlassuiModule,
-  ]
+    imports: [
+        CommonModule,
+        GlassuiModule,
+        FormsModule,
+    ]
 })
 export class ComponentsExamplesModule {
 }

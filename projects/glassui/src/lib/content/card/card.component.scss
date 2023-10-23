@@ -116,6 +116,15 @@
       }
     }
 
+    &.darkblue{
+      background: var(--color-darkblue-25);
+      &.transparency-50{
+        background: var(--color-darkblue-50);
+      }
+      &.transparency-75{
+        background: var(--color-darkblue-75);
+      }
+    }
 
   }
 }

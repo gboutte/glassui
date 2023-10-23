@@ -62,6 +62,12 @@
   --color-gray-50: rgba(var(--color-gray-rgb), 0.5);
   --color-gray-75: rgba(var(--color-gray-rgb), 0.75);
 
+  --color-darkblue-rgb: 17, 25, 40;
+  --color-darkblue: rgb(var(--color-darkblue-rgb));
+  --color-darkblue-25: rgba(var(--color-darkblue-rgb), 0.25);
+  --color-darkblue-50: rgba(var(--color-darkblue-rgb), 0.5);
+  --color-darkblue-75: rgba(var(--color-darkblue-rgb), 0.75);
+
 //  SHADOWS
   --shadow-simple:0 8px 32px 0 rgba( 31, 38, 135, 0.37 );
 
@@ -69,8 +75,8 @@
   --blur-small: blur( 4px );
   --blur-medium: blur( 8px );
   --blur-big: blur( 12px );
-  --blur-biger: blur( 16px );
+  --blur-bigger: blur( 16px );
 
   // RADIUS
-  --radius-simple: 10px;
+  --radius-simple: 12px;
 }

@@ -78,4 +78,11 @@ button{
     }
   }
 
+  &.darkblue{
+    background: var(--color-darkblue-25);
+    &:hover{
+      background-color: var(--color-darkblue-75);
+    }
+  }
+
 }

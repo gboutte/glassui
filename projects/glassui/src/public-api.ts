@@ -23,4 +23,5 @@ export * from './lib/content/card/card.component';
 export * from './lib/forms/forms.module';
 //inputs
 export * from './lib/forms/inputs/inputs.module';
+export * from './lib/forms/inputs/input/input.component';
 

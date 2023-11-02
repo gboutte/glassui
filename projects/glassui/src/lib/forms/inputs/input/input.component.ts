@@ -8,6 +8,8 @@ import {ControlValueAccessor, FormControl, NgControl} from "@angular/forms";
 })
 export class InputComponent implements ControlValueAccessor, OnInit {
   @Input() label?: string;
+  @Input() type: "text"|"password" = "text";
+  @Input() showErrors: boolean = false;
 // The method called when the input is touched
   onTouched = () => {
   };
@@ -18,6 +20,16 @@ export class InputComponent implements ControlValueAccessor, OnInit {
   constructor(@Optional() @Self() private ngControl: NgControl) {
     if (this.ngControl) this.ngControl.valueAccessor = this;
     this.inputId = 'glassui-input-' + Math.floor(Math.random() * 999999999);
+  }
+
+  get errors() {
+    if(!this.ngControl || this.ngControl.errors === null) return [];
+    const errorsValidator = this.ngControl.errors;
+    return Object.keys(errorsValidator).map((key) => {
+      return errorsValidator[key];
+    }).filter((error) => {
+      return error !== null && error !== undefined && typeof error === 'string' && error.length > 0;
+    });
   }
 
   /**

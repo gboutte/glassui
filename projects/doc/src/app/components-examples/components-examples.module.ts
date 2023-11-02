@@ -9,7 +9,9 @@ import { SidebarExampleComponent } from './navigation/sidebar-example/sidebar-ex
 import { NavbarExampleComponent } from './navigation/navbar-example/navbar-example.component';
 import { NavbarSidebarExampleComponent } from './navigation/navbar-sidebar-example/navbar-sidebar-example.component';
 import { InputExampleComponent } from './forms/inputs/input-example/input-example.component';
-import {FormsModule} from "@angular/forms";
+import {FormsModule, ReactiveFormsModule} from "@angular/forms";
+import { InputTypesExampleComponent } from './forms/inputs/input-types-example/input-types-example.component';
+import { InputValidationExampleComponent } from './forms/inputs/input-validation-example/input-validation-example.component';
 
 
 @NgModule({
@@ -22,6 +24,8 @@ import {FormsModule} from "@angular/forms";
     NavbarExampleComponent,
     NavbarSidebarExampleComponent,
     InputExampleComponent,
+    InputTypesExampleComponent,
+    InputValidationExampleComponent,
   ],
   exports: [
     ButtonsExampleComponent,
@@ -32,12 +36,15 @@ import {FormsModule} from "@angular/forms";
     NavbarExampleComponent,
     NavbarSidebarExampleComponent,
     InputExampleComponent,
+    InputTypesExampleComponent,
+    InputValidationExampleComponent,
   ],
-    imports: [
-        CommonModule,
-        GlassuiModule,
-        FormsModule,
-    ]
+  imports: [
+    CommonModule,
+    GlassuiModule,
+    FormsModule,
+    ReactiveFormsModule,
+  ]
 })
 export class ComponentsExamplesModule {
 }

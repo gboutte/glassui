@@ -8,6 +8,9 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ## Unreleased
 ### Added
 - Darkblue color
+- Input types (password / text)
+- Input validator
+- Inputs examples in the documentation
 
 ## 0.0.2-beta.1 - 2023-10-23
 ### Added

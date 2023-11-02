@@ -1,29 +1,48 @@
-.input{
+.input {
   display: inline-block;
   width: 100%;
   position: relative;
   padding-top: 20px;
   box-sizing: border-box;
   font-family: var(--font-family);
-  label{
+
+  label {
     position: absolute;
     top: 0;
     left: 0;
   }
-  input{
+
+  &.invalid {
+    input {
+      border-color: var(--color-red)
+    }
+
+    .errors {
+      .error {
+        color: var(--color-red);
+        display: block;
+        margin-top: 5px;
+        margin-left: 3px;
+      }
+    }
+  }
+
+  input {
     backdrop-filter: var(--blur-bigger);
-    -webkit-backdrop-filter:  var(--blur-bigger);
-    background-color:var(--color-white-50);
+    -webkit-backdrop-filter: var(--blur-bigger);
+    background-color: var(--color-white-50);
     border-radius: 5px;
     border: 1px solid rgba(209, 213, 219, 0.3);
     padding: 8px 13px;
     font-size: 16px;
     width: 100%;
-    &:focus{
+
+    &:focus {
       box-shadow: 0 0 0 0.2rem var(--color-orange-25);
       border-color: var(--color-orange)
     }
-    &:focus-visible{
+
+    &:focus-visible {
       outline: none;
     }
   }

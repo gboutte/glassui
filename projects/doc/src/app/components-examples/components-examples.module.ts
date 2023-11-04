@@ -12,6 +12,7 @@ import { InputExampleComponent } from './forms/inputs/input-example/input-exampl
 import {FormsModule, ReactiveFormsModule} from "@angular/forms";
 import { InputTypesExampleComponent } from './forms/inputs/input-types-example/input-types-example.component';
 import { InputValidationExampleComponent } from './forms/inputs/input-validation-example/input-validation-example.component';
+import { SelectExampleComponent } from './forms/select/select-example/select-example.component';
 
 
 @NgModule({
@@ -26,6 +27,7 @@ import { InputValidationExampleComponent } from './forms/inputs/input-validation
     InputExampleComponent,
     InputTypesExampleComponent,
     InputValidationExampleComponent,
+    SelectExampleComponent,
   ],
   exports: [
     ButtonsExampleComponent,
@@ -38,6 +40,7 @@ import { InputValidationExampleComponent } from './forms/inputs/input-validation
     InputExampleComponent,
     InputTypesExampleComponent,
     InputValidationExampleComponent,
+    SelectExampleComponent,
   ],
   imports: [
     CommonModule,

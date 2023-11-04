@@ -25,3 +25,7 @@ export * from './lib/forms/forms.module';
 export * from './lib/forms/inputs/inputs.module';
 export * from './lib/forms/inputs/input/input.component';
 
+//selects
+export * from './lib/forms/selects/selects.module';
+export * from './lib/forms/selects/select/select.component';
+

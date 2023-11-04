@@ -1,0 +1,12 @@
+
+<div class="input" [class.invalid]="control.invalid">
+  <label [for]="inputId" *ngIf="label">{{label}}</label>
+  <select [id]="inputId" [formControl]="control">
+    <option *ngFor="let option of options" [value]="option.value">{{option.label}}</option>
+  </select>
+  <ng-template [ngIf]="control.touched && errors.length > 0">
+    <div class="errors">
+      <small class="error" *ngFor="let error of errors">{{error}}</small>
+    </div>
+  </ng-template>
+</div>

@@ -1,6 +1,6 @@
 {
   "name": "@gboutte/glassui",
-  "version": "0.0.2-beta.2",
+  "version": "0.0.2-beta.3",
   "peerDependencies": {
     "@angular/common": "^16.1.0",
     "@angular/core": "^16.1.0"

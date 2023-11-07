@@ -9,8 +9,9 @@ import {Color} from "../../shared/color.type";
 export class ButtonComponent {
 
   @Input() color:Color = "white";
+  @Input() round:boolean = false;
 
   getClasses() {
-    return `${this.color}`;
+    return `${this.color} ${this.round ? 'round-icon' : ''}`;
   }
 }

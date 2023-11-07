@@ -13,6 +13,7 @@ import {FormsModule, ReactiveFormsModule} from "@angular/forms";
 import { InputTypesExampleComponent } from './forms/inputs/input-types-example/input-types-example.component';
 import { InputValidationExampleComponent } from './forms/inputs/input-validation-example/input-validation-example.component';
 import { SelectExampleComponent } from './forms/select/select-example/select-example.component';
+import { ToastExampleComponent } from './toast/toast-example/toast-example.component';
 
 
 @NgModule({
@@ -28,6 +29,7 @@ import { SelectExampleComponent } from './forms/select/select-example/select-exa
     InputTypesExampleComponent,
     InputValidationExampleComponent,
     SelectExampleComponent,
+    ToastExampleComponent,
   ],
   exports: [
     ButtonsExampleComponent,
@@ -41,6 +43,7 @@ import { SelectExampleComponent } from './forms/select/select-example/select-exa
     InputTypesExampleComponent,
     InputValidationExampleComponent,
     SelectExampleComponent,
+    ToastExampleComponent,
   ],
   imports: [
     CommonModule,

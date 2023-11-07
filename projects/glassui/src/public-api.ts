@@ -19,6 +19,11 @@ export * from './lib/navigation/page/page.component';
 export * from './lib/content/content.module';
 export * from './lib/content/card/card.component';
 
+//toast
+export * from './lib/toast/toast.module';
+export * from './lib/toast/toast.service';
+
+
 //Forms
 export * from './lib/forms/forms.module';
 //inputs

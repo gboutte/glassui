@@ -1,0 +1,14 @@
+<gl-card class="toast" [color]="color">
+
+  <ng-template [ngIf]="title !== undefined && title.length > 0">
+    <div class="title">
+      {{title}}
+    </div>
+  </ng-template>
+
+  <ng-template [ngIf]="description !== undefined && description.length > 0">
+    <div class="description">
+    {{description}}
+    </div>
+  </ng-template>
+</gl-card>

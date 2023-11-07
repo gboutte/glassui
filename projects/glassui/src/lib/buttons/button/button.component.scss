@@ -12,6 +12,10 @@ button{
   box-sizing: border-box;
   font-family: var(--font-family);
 
+  &.round-icon{
+    border-radius: 20px;
+  }
+
   &:hover{
     background-color: var(--color-white-75);
   }

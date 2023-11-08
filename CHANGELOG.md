@@ -10,6 +10,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - round button
 - toast
 - table component
+- loader component
 
 ## 0.0.2-beta.3 - 2023-11-04
 ### Added

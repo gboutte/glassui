@@ -19,6 +19,7 @@ export * from './lib/navigation/page/page.component';
 export * from './lib/content/content.module';
 export * from './lib/content/card/card.component';
 export * from './lib/content/table/table/table.component';
+export * from './lib/content/loader/loader.component';
 
 //toast
 export * from './lib/toast/toast.module';

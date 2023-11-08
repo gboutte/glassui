@@ -15,6 +15,7 @@ import { InputValidationExampleComponent } from './forms/inputs/input-validation
 import { SelectExampleComponent } from './forms/select/select-example/select-example.component';
 import { ToastExampleComponent } from './toast/toast-example/toast-example.component';
 import { TableExampleComponent } from './content/table-example/table-example.component';
+import { LoaderExampleComponent } from './content/loader-example/loader-example.component';
 
 
 @NgModule({
@@ -32,6 +33,7 @@ import { TableExampleComponent } from './content/table-example/table-example.com
     SelectExampleComponent,
     ToastExampleComponent,
     TableExampleComponent,
+    LoaderExampleComponent,
   ],
   exports: [
     ButtonsExampleComponent,
@@ -47,6 +49,7 @@ import { TableExampleComponent } from './content/table-example/table-example.com
     SelectExampleComponent,
     ToastExampleComponent,
     TableExampleComponent,
+    LoaderExampleComponent,
   ],
   imports: [
     CommonModule,

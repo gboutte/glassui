@@ -9,7 +9,7 @@ import {Color} from "../../shared/color.type";
 export class CardComponent {
   @Input() color:Color = "white";
   @Input() transparency: "25"|"50"|"75" = "25";
-  @Input() blur: "small"|"medium"|"big"|"bigger" = "small";
+  @Input() blur: "small"|"medium"|"big"|"bigger" = "bigger";
 
   getClasses() {
     return `${this.color} transparency-${this.transparency} blur-${this.blur}`;

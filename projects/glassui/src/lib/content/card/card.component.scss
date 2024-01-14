@@ -3,7 +3,7 @@
 
   .card{
     background: var(--color-white-25);
-    box-shadow: var(--shadow-simple);
+    border:var(--border-size) solid var(--color-gray-25);
     backdrop-filter: var(--blur-small);
     -webkit-backdrop-filter: var(--blur-small);
     border-radius: var(--radius-simple);

@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import {ToastService} from "../../../../../../glassui/src/lib/toast/toast.service";
+import {Color} from "../../../../../../glassui/src/lib/shared/color.type";
 
 @Component({
   selector: 'gd-toast-example',
@@ -13,7 +14,12 @@ export class ToastExampleComponent {
     this.toastService = toastService;
   }
 
-  alert() {
-    this.toastService.alert("green", "Title", "Description");
+  alert(color:Color, title:string, description:string,icon:'success'|'error'|'info'|undefined = undefined) {
+    this.toastService.alert({
+      color: color,
+      title: title,
+      description: description,
+      icon: icon
+    });
   }
 }

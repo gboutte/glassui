@@ -1,3 +1,7 @@
 
 
-<gl-button (click)="alert()">Alert</gl-button>
+<gl-button (click)="alert('white','Title','Lorem ipsum dolor sit amet, consectetur adipiscing elit.')">Alert simple</gl-button>
+<gl-button (click)="alert('orange','Title','Lorem ipsum dolor sit amet, consectetur adipiscing elit.')">Alert color</gl-button>
+<gl-button (click)="alert('white','Title','Lorem ipsum dolor sit amet, consectetur adipiscing elit.','success')">Alert icon success</gl-button>
+<gl-button (click)="alert('white','Title','Lorem ipsum dolor sit amet, consectetur adipiscing elit.','error')">Alert icon error</gl-button>
+<gl-button (click)="alert('white','Title','Lorem ipsum dolor sit amet, consectetur adipiscing elit.','info')">Alert icon info</gl-button>

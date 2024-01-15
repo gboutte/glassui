@@ -12,15 +12,27 @@ private viewContainerRef!: ViewContainerRef;
 
 
   }
-  alert(color:Color = "green",title:string,description: string,delay: number = 3000) {
+  alert(toastOptions: ToastOptions) {
 
     const component = this.viewContainerRef.createComponent(ToastComponent);
-    component.instance.title = title;
-    component.instance.description = description;
+    component.instance.title = toastOptions.title;
+    component.instance.description = toastOptions.description;
+    component.instance.color = toastOptions.color ?? 'green';
+    component.instance.icon = toastOptions.icon ?? null;
+    const delay = toastOptions.delay ?? 3000;
 
     setTimeout(() => {
       component.destroy();
     }, delay);
 
   }
+}
+
+
+interface ToastOptions {
+  color?: Color;
+  title: string;
+  description: string;
+  delay?: number;
+  icon?: 'success'|'error'|'info';
 }

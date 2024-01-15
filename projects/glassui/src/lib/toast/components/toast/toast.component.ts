@@ -11,4 +11,5 @@ export class ToastComponent {
 
   @Input() title!: string;
   @Input() description!: string;
+  @Input() icon: string|null = null;
 }

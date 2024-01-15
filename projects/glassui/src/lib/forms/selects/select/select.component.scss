@@ -37,10 +37,10 @@
     font-size: 16px;
     width: 100%;
 
-    &:focus {
-      box-shadow: 0 0 0 0.2rem var(--color-orange-25);
-      border-color: var(--color-orange)
-    }
+    //&:focus {
+    //  box-shadow: 0 0 0 0.2rem var(--color-orange-25);
+    //  border-color: var(--color-orange)
+    //}
 
     &:focus-visible {
       outline: none;

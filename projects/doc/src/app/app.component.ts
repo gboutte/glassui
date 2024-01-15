@@ -14,6 +14,10 @@ export class AppComponent {
       link: '/setup'
     },
     {
+      label: 'Theme',
+      link: '/theme'
+    },
+    {
       label: 'Buttons',
       link: '/buttons'
     },

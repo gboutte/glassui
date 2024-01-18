@@ -1,5 +1,5 @@
 
-<div class="input" [class.invalid]="control.invalid">
+<div class="input" [class.invalid]="control.invalid" [class.checked]="control.value">
   <input [id]="inputId" [formControl]="control" type="checkbox"/>
   <label [for]="inputId" *ngIf="label">{{label}}</label>
   <ng-template [ngIf]="control.touched && errors.length > 0">

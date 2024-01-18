@@ -16,6 +16,10 @@ import { SelectExampleComponent } from './forms/select/select-example/select-exa
 import { ToastExampleComponent } from './toast/toast-example/toast-example.component';
 import { TableExampleComponent } from './content/table-example/table-example.component';
 import { LoaderExampleComponent } from './content/loader-example/loader-example.component';
+import {
+  CheckboxValidationExampleComponent
+} from "./forms/checkbox/checkbox-validation-example/checkbox-validation-example.component";
+import {CheckboxExampleComponent} from "./forms/checkbox/checkbox-example/checkbox-example.component";
 
 
 @NgModule({
@@ -34,6 +38,8 @@ import { LoaderExampleComponent } from './content/loader-example/loader-example.
     ToastExampleComponent,
     TableExampleComponent,
     LoaderExampleComponent,
+    CheckboxValidationExampleComponent,
+    CheckboxExampleComponent,
   ],
   exports: [
     ButtonsExampleComponent,
@@ -50,6 +56,8 @@ import { LoaderExampleComponent } from './content/loader-example/loader-example.
     ToastExampleComponent,
     TableExampleComponent,
     LoaderExampleComponent,
+    CheckboxValidationExampleComponent,
+    CheckboxExampleComponent,
   ],
   imports: [
     CommonModule,

@@ -36,3 +36,7 @@ export * from './lib/forms/inputs/input/input.component';
 export * from './lib/forms/selects/selects.module';
 export * from './lib/forms/selects/select/select.component';
 
+//checkbox
+export * from './lib/forms/checkbox/checkbox.module';
+export * from './lib/forms/checkbox/checkbox/checkbox.component';
+

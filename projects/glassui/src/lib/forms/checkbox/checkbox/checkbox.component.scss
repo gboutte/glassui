@@ -1,0 +1,39 @@
+.input {
+  display: inline-block;
+  width: 100%;
+  position: relative;
+  padding-top: 20px;
+  box-sizing: border-box;
+  font-family: var(--font-family);
+  &.invalid {
+    input {
+      box-shadow: 0 0 0 0.1rem var(--color-red-25);
+    }
+    label {
+      color: var(--color-red);
+    }
+    .errors {
+      .error {
+        color: var(--color-red);
+        display: block;
+        margin-top: 5px;
+        margin-left: 3px;
+      }
+    }
+  }
+
+  input {
+    border-radius: 5px;
+    padding: 8px 13px;
+    font-size: 16px;
+
+    &:focus {
+      box-shadow: 0 0 0 0.2rem var(--color-orange-25);
+      border-color: var(--color-orange)
+    }
+
+    &:focus-visible {
+      outline: none;
+    }
+  }
+}

@@ -1,5 +1,10 @@
 :host {
   display: block;
+  ::ng-deep{
+    .card{
+      overflow-x:auto;
+    }
+  }
 
   table {
     border-collapse: collapse;

@@ -1,0 +1,6 @@
+<gl-checkbox label="Checkbox with validator" [formControl]="inputWithRequired"/>
+<gl-checkbox label="Checkbox marked as invalid" [formControl]="inputMarkedInvalid"/>
+<gl-checkbox label="Checkbox with show error" [formControl]="inputShowError" [showErrors]="true"/>
+<gl-button (click)="markAsInvalid()">Mark as invalid</gl-button>
+<gl-button (click)="markAsValid()">Mark as valid</gl-button>
+

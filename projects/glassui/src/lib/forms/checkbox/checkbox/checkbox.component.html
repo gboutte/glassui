@@ -1,0 +1,10 @@
+
+<div class="input" [class.invalid]="control.invalid">
+  <input [id]="inputId" [formControl]="control" type="checkbox"/>
+  <label [for]="inputId" *ngIf="label">{{label}}</label>
+  <ng-template [ngIf]="control.touched && errors.length > 0">
+    <div class="errors">
+      <small class="error" *ngFor="let error of errors">{{error}}</small>
+    </div>
+  </ng-template>
+</div>

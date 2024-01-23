@@ -16,6 +16,11 @@ import { SelectExampleComponent } from './forms/select/select-example/select-exa
 import { ToastExampleComponent } from './toast/toast-example/toast-example.component';
 import { TableExampleComponent } from './content/table-example/table-example.component';
 import { LoaderExampleComponent } from './content/loader-example/loader-example.component';
+import {
+  ContentExampleComponent,
+  ContentExampleWithDataComponent,
+  ModalExampleComponent
+} from './modal/modal-example/modal-example.component';
 
 
 @NgModule({
@@ -34,6 +39,9 @@ import { LoaderExampleComponent } from './content/loader-example/loader-example.
     ToastExampleComponent,
     TableExampleComponent,
     LoaderExampleComponent,
+    ModalExampleComponent,
+    ContentExampleComponent,
+    ContentExampleWithDataComponent
   ],
   exports: [
     ButtonsExampleComponent,
@@ -50,6 +58,7 @@ import { LoaderExampleComponent } from './content/loader-example/loader-example.
     ToastExampleComponent,
     TableExampleComponent,
     LoaderExampleComponent,
+    ModalExampleComponent,
   ],
   imports: [
     CommonModule,

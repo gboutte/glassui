@@ -17,7 +17,11 @@ import { ToastExampleComponent } from './toast/toast-example/toast-example.compo
 import { TableExampleComponent } from './content/table-example/table-example.component';
 import { LoaderExampleComponent } from './content/loader-example/loader-example.component';
 import {
-  CheckboxValidationExampleComponent
+  ContentExampleComponent,
+  ContentExampleWithDataComponent,
+  ModalExampleComponent
+} from './modal/modal-example/modal-example.component';
+ import { CheckboxValidationExampleComponent
 } from "./forms/checkbox/checkbox-validation-example/checkbox-validation-example.component";
 import {CheckboxExampleComponent} from "./forms/checkbox/checkbox-example/checkbox-example.component";
 
@@ -38,6 +42,9 @@ import {CheckboxExampleComponent} from "./forms/checkbox/checkbox-example/checkb
     ToastExampleComponent,
     TableExampleComponent,
     LoaderExampleComponent,
+    ModalExampleComponent,
+    ContentExampleComponent,
+    ContentExampleWithDataComponent,
     CheckboxValidationExampleComponent,
     CheckboxExampleComponent,
   ],
@@ -56,6 +63,7 @@ import {CheckboxExampleComponent} from "./forms/checkbox/checkbox-example/checkb
     ToastExampleComponent,
     TableExampleComponent,
     LoaderExampleComponent,
+    ModalExampleComponent,
     CheckboxValidationExampleComponent,
     CheckboxExampleComponent,
   ],

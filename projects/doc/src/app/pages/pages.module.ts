@@ -9,6 +9,7 @@ import { ContentPageComponent } from './components/content-page/content-page.com
 import {SharedDocModule} from "../shared-doc/shared-doc.module";
 import {ComponentsExamplesModule} from "../components-examples/components-examples.module";
 import {GlassuiModule} from "../../../../glassui/src/lib/glassui.module";
+import { ModalPageComponent } from './components/modal-page/modal-page.component';
 
 
 
@@ -18,7 +19,8 @@ import {GlassuiModule} from "../../../../glassui/src/lib/glassui.module";
     ButtonsPageComponent,
     NavigationPageComponent,
     InputsPageComponent,
-    ContentPageComponent
+    ContentPageComponent,
+    ModalPageComponent
   ],
   imports: [
     CommonModule,

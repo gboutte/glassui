@@ -36,6 +36,11 @@ export * from './lib/forms/inputs/input/input.component';
 export * from './lib/forms/selects/selects.module';
 export * from './lib/forms/selects/select/select.component';
 
+//modal
+export * from './lib/modal/modal.module';
+export * from './lib/modal/components/modal/modal.component';
+export * from './lib/modal/modal.service';
+
 //checkbox
 export * from './lib/forms/checkbox/checkbox.module';
 export * from './lib/forms/checkbox/checkbox/checkbox.component';

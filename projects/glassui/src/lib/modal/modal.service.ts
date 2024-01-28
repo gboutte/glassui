@@ -2,6 +2,9 @@ import {ApplicationRef, createEnvironmentInjector, Injectable, Type, ViewContain
 import {ModalComponent} from "./components/modal/modal.component";
 import {Observable} from "rxjs";
 import {ModalConfig} from "./modal-config";
+import {ModalConfirmConfig} from "./modal-confirm-config";
+import {ModalConfirmComponent} from "./components/modal-confirm/modal-confirm.component";
+import {ModalRef} from "./modal-ref";
 
 @Injectable()
 export class ModalService {
@@ -18,17 +21,25 @@ export class ModalService {
   open<C>(componentType: Type<C>, config: ModalConfig = new ModalConfig()): Observable<any> {
 
     let modalConfig: ModalConfig = Object.assign(new ModalConfig(), config);
+    let modalRef:ModalRef = new ModalRef();
 
     const childInjector = createEnvironmentInjector([
       {
         provide: ModalConfig,
         useValue: modalConfig
+      },
+      {
+        provide: ModalRef,
+        useValue: modalRef
       }
     ], this.applicationRef.injector)
 
     const component = this.viewContainerRef.createComponent(ModalComponent, {
       environmentInjector: childInjector
     });
+    modalRef.close = (result) => {
+      component.instance.close.emit(result)
+    }
     component.instance.componentContent = componentType;
 
     component.instance.close.subscribe(() => {
@@ -38,6 +49,24 @@ export class ModalService {
       component.destroy();
       }, 100);
     });
+
+
+
     return component.instance.close.asObservable();
+  }
+
+
+  confirm(title: string, message: string, config: ModalConfirmConfig = new ModalConfirmConfig()): Observable<any> {
+    let modalConfig: ModalConfig = Object.assign(new ModalConfig(), config);
+
+    if(!modalConfig.data) {
+      modalConfig.data = {};
+    }
+    modalConfig.data.confirmData = config;
+    modalConfig.title = title;
+    modalConfig.data.message = message;
+
+    return this.open(ModalConfirmComponent, modalConfig);
+
   }
 }

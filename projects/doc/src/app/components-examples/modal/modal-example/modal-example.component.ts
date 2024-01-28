@@ -17,6 +17,11 @@ export class ModalExampleComponent {
   open() {
     this.modalService.open(ContentExampleComponent);
   }
+  openConfirm() {
+    this.modalService.confirm('Are you sure?', 'This action cannot be undone.').subscribe((result) => {
+      console.log('Result of confirm:',result);
+    });
+  }
 
   openWithData() {
     this.modalService.open(ContentExampleWithDataComponent, {

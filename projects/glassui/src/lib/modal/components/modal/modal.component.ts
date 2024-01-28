@@ -1,4 +1,5 @@
 import {Component, EventEmitter, Input, OnInit, Output, Type, ViewChild, ViewContainerRef} from '@angular/core';
+import {ModalConfig} from "../../modal-config";
 
 @Component({
   selector: 'gl-modal',
@@ -10,8 +11,8 @@ export class ModalComponent implements OnInit {
   @ViewChild('content', {read: ViewContainerRef, static: true}) //normal way
   content!: ViewContainerRef;
   @Output() close = new EventEmitter();
-
-  constructor() {
+  closed = false;
+  constructor(protected modalConfig: ModalConfig) {
   }
 
   ngOnInit(): void {
@@ -24,4 +25,7 @@ export class ModalComponent implements OnInit {
     this.close.emit(null);
   }
 
+  closeAnimation(){
+    this.closed = true;
+  }
 }

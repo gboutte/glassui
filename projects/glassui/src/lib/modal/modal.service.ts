@@ -15,11 +15,9 @@ export class ModalService {
 
   }
 
-  open<C>(componentType: Type<C>, data: any = undefined): Observable<any> {
+  open<C>(componentType: Type<C>, config: ModalConfig = new ModalConfig()): Observable<any> {
 
-    const modalConfig: ModalConfig = new ModalConfig();
-    modalConfig.data = data;
-
+    let modalConfig: ModalConfig = Object.assign(new ModalConfig(), config);
 
     const childInjector = createEnvironmentInjector([
       {
@@ -34,7 +32,11 @@ export class ModalService {
     component.instance.componentContent = componentType;
 
     component.instance.close.subscribe(() => {
+      component.instance.closeAnimation();
+      //Delay the destroy to allow the animation to finish (200ms)
+      setTimeout(() => {
       component.destroy();
+      }, 100);
     });
     return component.instance.close.asObservable();
   }

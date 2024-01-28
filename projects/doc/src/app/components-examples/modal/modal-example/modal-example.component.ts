@@ -19,7 +19,10 @@ export class ModalExampleComponent {
   }
 
   openWithData() {
-    this.modalService.open(ContentExampleWithDataComponent, {text: this.data});
+    this.modalService.open(ContentExampleWithDataComponent, {
+      data: {text: this.data},
+      title: "My title defined in config" //You can define modal config here
+    });
   }
 
 }
@@ -41,5 +44,7 @@ export class ContentExampleWithDataComponent {
   textContent:string;
   constructor(private modalConfig: ModalConfig) {
     this.textContent = modalConfig.data.text;
+    modalConfig.title = "A simple title"; // You can also change modal config here
+    modalConfig.cssClasses?.push("my-custom-class"); // You can also add css classes here
   }
 }

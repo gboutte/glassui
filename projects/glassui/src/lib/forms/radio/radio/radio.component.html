@@ -1,0 +1,10 @@
+
+<div class="input" [class.invalid]="control.invalid" [class.checked]="checked">
+  <input (click)="select()" [id]="inputId" type="radio" [name]="radioGroup" [value]="value" [formControl]="control"/>
+  <label [for]="inputId" *ngIf="label">{{label}}</label>
+  <ng-template [ngIf]="control.touched && errors.length > 0">
+    <div class="errors">
+      <small class="error" *ngFor="let error of errors">{{error}}</small>
+    </div>
+  </ng-template>
+</div>

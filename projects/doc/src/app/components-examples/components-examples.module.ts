@@ -24,6 +24,7 @@ import {
  import { CheckboxValidationExampleComponent
 } from "./forms/checkbox/checkbox-validation-example/checkbox-validation-example.component";
 import {CheckboxExampleComponent} from "./forms/checkbox/checkbox-example/checkbox-example.component";
+import { RadioExampleComponent } from './forms/radio-example/radio-example.component';
 
 
 @NgModule({
@@ -47,6 +48,7 @@ import {CheckboxExampleComponent} from "./forms/checkbox/checkbox-example/checkb
     ContentExampleWithDataComponent,
     CheckboxValidationExampleComponent,
     CheckboxExampleComponent,
+    RadioExampleComponent,
   ],
   exports: [
     ButtonsExampleComponent,
@@ -66,6 +68,7 @@ import {CheckboxExampleComponent} from "./forms/checkbox/checkbox-example/checkb
     ModalExampleComponent,
     CheckboxValidationExampleComponent,
     CheckboxExampleComponent,
+    RadioExampleComponent,
   ],
   imports: [
     CommonModule,

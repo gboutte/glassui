@@ -45,3 +45,6 @@ export * from './lib/modal/modal.service';
 export * from './lib/forms/checkbox/checkbox.module';
 export * from './lib/forms/checkbox/checkbox/checkbox.component';
 
+//radio
+export * from './lib/forms/radio/radio.module';
+export * from './lib/forms/radio/radio/radio.component';

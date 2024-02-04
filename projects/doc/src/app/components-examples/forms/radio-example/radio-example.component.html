@@ -1,0 +1,18 @@
+<gl-radio label="Value 1: blue" value="blue" [(ngModel)]="inputValue" radioGroup="color"/>
+<gl-radio label="Value 2: red" value="red" [(ngModel)]="inputValue" radioGroup="color"/>
+<gl-card>
+  My radio: "{{inputValue}}"
+</gl-card>
+
+
+<hr>
+<gl-radio label="Value 1: blue" value="blue" [formControl]="inputMarkedInvalid" radioGroup="colorWithValidation"/>
+<gl-radio label="Value 2: red" value="red" [formControl]="inputMarkedInvalid" radioGroup="colorWithValidation"/>
+
+<hr>
+<gl-radio label="Value 1: blue" value="blue" [formControl]="inputShowError" radioGroup="colorWithValidation2"/>
+<gl-radio label="Value 2: red" value="red" [formControl]="inputShowError" radioGroup="colorWithValidation2"/>
+
+<gl-button (click)="markAsInvalid()">Mark as invalid</gl-button>
+<gl-button (click)="markAsValid()">Mark as valid</gl-button>
+

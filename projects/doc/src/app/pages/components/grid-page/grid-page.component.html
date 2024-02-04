@@ -1,0 +1,34 @@
+<gl-card>
+  <h1>Grid</h1>
+  All columns class:
+  <ul>
+    <li *ngFor="let item of [].constructor(12); let i = index">col-{{i+1}}</li>
+  </ul>
+
+  All gaps class:
+  <ul>
+    <li *ngFor="let item of [].constructor(12); let i = index">gap-{{(i+1)*10}}</li>
+  </ul>
+
+  <gd-code-snippet source="grid/grid-cols-example" [files]="['html']">
+    <gd-grid-cols-example/>
+  </gd-code-snippet>
+
+  <h2>Responsive</h2>
+
+  All responsive columns class apply to the breakpoint and above:
+  <ul>
+    <li>Small: >= 320px</li>
+    <li>Medium: >= 420px</li>
+    <li>Large: >= 768px</li>
+    <li>Extra Large: >= 1440px</li>
+  </ul>
+
+  For example, col-1-md will apply to medium and above, col-1-lg will apply to large and above, and col-1-xl will apply to extra large and above.
+
+  The class without breakpoint will apply to all screen, unless there is another class to ovewrite it.
+
+  <gd-code-snippet source="grid/grid-cols-responsive-example" [files]="['html']">
+    <gd-grid-cols-responsive-example/>
+  </gd-code-snippet>
+</gl-card>

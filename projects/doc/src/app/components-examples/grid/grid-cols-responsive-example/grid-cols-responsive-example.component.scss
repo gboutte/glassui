@@ -1,0 +1,10 @@
+div {
+  border:2px solid var(--color-darkblue);
+  padding: 10px;
+  border-radius: 10px;
+  > div{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+}

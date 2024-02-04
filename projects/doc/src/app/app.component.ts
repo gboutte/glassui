@@ -36,6 +36,10 @@ export class AppComponent {
     {
       label: 'Modal',
       link: '/modal',
+    },
+    {
+      label: 'Grid',
+      link: '/grid',
     }
   ]
 }

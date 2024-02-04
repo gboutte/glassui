@@ -25,6 +25,8 @@ import {
 } from "./forms/checkbox/checkbox-validation-example/checkbox-validation-example.component";
 import {CheckboxExampleComponent} from "./forms/checkbox/checkbox-example/checkbox-example.component";
 import { RadioExampleComponent } from './forms/radio-example/radio-example.component';
+import { GridColsExampleComponent } from './grid/grid-cols-example/grid-cols-example.component';
+import { GridColsResponsiveExampleComponent } from './grid/grid-cols-responsive-example/grid-cols-responsive-example.component';
 
 
 @NgModule({
@@ -49,6 +51,8 @@ import { RadioExampleComponent } from './forms/radio-example/radio-example.compo
     CheckboxValidationExampleComponent,
     CheckboxExampleComponent,
     RadioExampleComponent,
+    GridColsExampleComponent,
+    GridColsResponsiveExampleComponent,
   ],
   exports: [
     ButtonsExampleComponent,
@@ -69,6 +73,8 @@ import { RadioExampleComponent } from './forms/radio-example/radio-example.compo
     CheckboxValidationExampleComponent,
     CheckboxExampleComponent,
     RadioExampleComponent,
+    GridColsExampleComponent,
+    GridColsResponsiveExampleComponent,
   ],
   imports: [
     CommonModule,

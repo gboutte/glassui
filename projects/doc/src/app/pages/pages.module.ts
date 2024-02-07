@@ -11,6 +11,8 @@ import {ComponentsExamplesModule} from "../components-examples/components-exampl
 import {GlassuiModule} from "../../../../glassui/src/lib/glassui.module";
 import { ModalPageComponent } from './components/modal-page/modal-page.component';
 import { GridPageComponent } from './components/grid-page/grid-page.component';
+import {Highlight, HighlightModule} from "ngx-highlightjs";
+import { ThemePageComponent } from './components/theme-page/theme-page.component';
 
 
 
@@ -22,14 +24,16 @@ import { GridPageComponent } from './components/grid-page/grid-page.component';
     InputsPageComponent,
     ContentPageComponent,
     ModalPageComponent,
-    GridPageComponent
+    GridPageComponent,
+    ThemePageComponent
   ],
-  imports: [
-    CommonModule,
-    PagesRoutingModule,
-    SharedDocModule,
-    ComponentsExamplesModule,
-    GlassuiModule,
-  ]
+    imports: [
+        CommonModule,
+        PagesRoutingModule,
+        SharedDocModule,
+        ComponentsExamplesModule,
+        GlassuiModule,
+      HighlightModule
+    ],
 })
 export class PagesModule { }

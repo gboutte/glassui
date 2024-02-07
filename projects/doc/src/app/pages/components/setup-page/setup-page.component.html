@@ -1,12 +1,18 @@
 <gl-card>
   <h1>Setup</h1>
-  <div>
-    npm install @gboutte/glassui
-  </div>
+  First you need to install the library
+  <pre><code [highlight]="bashInstall"
+             [languages]="['bash']"
+             [lineNumbers]="true"
+  ></code></pre>
 
+  You need to import the stylesheet of the theme in your angular.json
+  <pre><code
+    [languages]="['json']"
+    [highlight]="themeConfig"  [lineNumbers]="true"></code></pre>
   <div>
-    "styles": [
-      "node_modules/@gboutte/glassui/styles/theme.scss"
-    ],
+
+    If you want you can overwrite the default styles by following this <a routerLink="/theme">guide</a>.
+
   </div>
 </gl-card>

@@ -6,5 +6,11 @@ import { Component } from '@angular/core';
   styleUrls: ['./setup-page.component.scss']
 })
 export class SetupPageComponent {
+  themeConfig = '{\n' +
+    '   "styles": [\n' +
+    '       "node_modules/@gboutte/glassui/styles/theme.scss"\n' +
+    '   ],\n' +
+    '}';
 
+  bashInstall = 'npm install @gboutte/glassui';
 }

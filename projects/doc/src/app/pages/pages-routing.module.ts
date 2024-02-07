@@ -7,6 +7,7 @@ import {InputsPageComponent} from "./components/inputs-page/inputs-page.componen
 import {ContentPageComponent} from "./components/content-page/content-page.component";
 import {ModalPageComponent} from "./components/modal-page/modal-page.component";
 import {GridPageComponent} from "./components/grid-page/grid-page.component";
+import {ThemePageComponent} from "./components/theme-page/theme-page.component";
 
 const routes: Routes = [
   { path: 'setup', component: SetupPageComponent },
@@ -16,6 +17,7 @@ const routes: Routes = [
   { path: 'content', component: ContentPageComponent},
   { path: 'grid', component: GridPageComponent},
   { path: 'modal', component: ModalPageComponent},
+  { path: 'theme', component: ThemePageComponent},
   { path: '', redirectTo: 'setup', pathMatch: 'full' },
 ];
 

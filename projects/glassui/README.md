@@ -1,24 +1,22 @@
 # Glassui
 
-This library was generated with [Angular CLI](https://github.com/angular/angular-cli) version 16.1.0.
+## Installation
 
-## Code scaffolding
+```bash
+npm install @glassui/glassui
+```
 
-Run `ng generate component component-name --project glassui` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module --project glassui`.
-> Note: Don't forget to add `--project glassui` or else it will be added to the default project in your `angular.json` file. 
+Inside your `angular.json` file, add the following to the `styles` array:
 
-## Build
+```json
+{
+   "styles": [
+       "node_modules/@gboutte/glassui/styles/theme.scss"
+   ],
+}
+```
 
-Run `ng build glassui` to build the project. The build artifacts will be stored in the `dist/` directory.
 
-## Publishing
+## Documentation
 
-After building your library with `ng build glassui`, go to the dist folder `cd dist/glassui` and run `npm publish`.
-
-## Running unit tests
-
-Run `ng test glassui` to execute the unit tests via [Karma](https://karma-runner.github.io).
-
-## Further help
-
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
+[https://glassui.greg.fail](https://glassui.greg.fail)

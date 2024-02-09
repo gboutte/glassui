@@ -12,5 +12,8 @@
     "type": "git",
     "url": "https://github.com/gboutte/glassui"
   },
-  "sideEffects": false
+  "sideEffects": false,
+  "exports": {
+    "./lib/modal/modal-ref": "./lib/modal/modal-ref.ts"
+  }
 }

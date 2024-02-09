@@ -24,6 +24,7 @@ export * from './lib/content/loader/loader.component';
 //toast
 export * from './lib/toast/toast.module';
 export * from './lib/toast/toast.service';
+export * from './lib/toast/components/toast/toast.component';
 
 
 //Forms

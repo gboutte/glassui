@@ -40,6 +40,8 @@ export * from './lib/forms/selects/select/select.component';
 export * from './lib/modal/modal.module';
 export * from './lib/modal/components/modal/modal.component';
 export * from './lib/modal/modal.service';
+export * from './lib/modal/modal-ref';
+export * from './lib/modal/modal-config';
 
 //checkbox
 export * from './lib/forms/checkbox/checkbox.module';

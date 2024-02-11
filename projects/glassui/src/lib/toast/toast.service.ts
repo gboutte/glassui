@@ -17,7 +17,7 @@ private viewContainerRef!: ViewContainerRef;
     const component = this.viewContainerRef.createComponent(ToastComponent);
     component.instance.title = toastOptions.title;
     component.instance.description = toastOptions.description;
-    component.instance.color = toastOptions.color ?? 'green';
+    component.instance.color = toastOptions.color ?? 'white';
     component.instance.icon = toastOptions.icon ?? null;
     const delay = toastOptions.delay ?? 3000;
 

@@ -7,7 +7,7 @@
     float: left;
     top: 5px;
     left: 0;
-    z-index: 1000;
+    z-index: var(--z-index-sidebar);
     padding: 0 5px 5px;
 
     &.hasNavbar {

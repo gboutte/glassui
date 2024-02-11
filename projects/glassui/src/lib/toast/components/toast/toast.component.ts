@@ -7,7 +7,7 @@ import {Color} from "../../../shared/color.type";
   styleUrls: ['./toast.component.scss'],
 })
 export class ToastComponent {
-  @Input() color: Color = 'green';
+  @Input() color: Color = 'white';
 
   @Input() title!: string;
   @Input() description!: string;

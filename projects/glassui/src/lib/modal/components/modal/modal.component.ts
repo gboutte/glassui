@@ -1,4 +1,14 @@
-import {Component, EventEmitter, Input, OnInit, Output, Type, ViewChild, ViewContainerRef} from '@angular/core';
+import {
+  ApplicationRef,
+  Component,
+  EventEmitter, Injector,
+  Input,
+  OnInit,
+  Output,
+  Type,
+  ViewChild,
+  ViewContainerRef
+} from '@angular/core';
 import {ModalConfig} from "../../modal-config";
 
 @Component({
@@ -12,12 +22,17 @@ export class ModalComponent implements OnInit {
   content!: ViewContainerRef;
   @Output() close = new EventEmitter();
   closed = false;
-  constructor(protected modalConfig: ModalConfig) {
+  constructor(
+    protected modalConfig: ModalConfig,
+    private injector: Injector,
+  ) {
   }
 
   ngOnInit(): void {
     if (this.componentContent !== undefined) {
-      this.content.createComponent(this.componentContent);
+      this.content.createComponent(this.componentContent,{
+        injector: this.injector
+      });
     }
   }
 

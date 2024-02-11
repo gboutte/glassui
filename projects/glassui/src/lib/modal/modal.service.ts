@@ -1,4 +1,11 @@
-import {ApplicationRef, createEnvironmentInjector, Injectable, Type, ViewContainerRef} from "@angular/core";
+import {
+  ApplicationRef, ComponentFactory, ComponentFactoryResolver, createComponent,
+  createEnvironmentInjector,
+  Injectable, Injector,
+  NgModuleRef,
+  Type,
+  ViewContainerRef
+} from "@angular/core";
 import {ModalComponent} from "./components/modal/modal.component";
 import {Observable} from "rxjs";
 import {ModalConfig} from "./modal-config";
@@ -12,9 +19,10 @@ export class ModalService {
   private viewContainerRef!: ViewContainerRef;
 
   constructor(
-    private applicationRef: ApplicationRef) {
+    private applicationRef: ApplicationRef,
+    private injector: Injector
+  ) {
     this.viewContainerRef = this.applicationRef.components[0].injector.get(ViewContainerRef);
-
 
   }
 
@@ -34,8 +42,9 @@ export class ModalService {
       }
     ], this.applicationRef.injector)
 
-    const component = this.viewContainerRef.createComponent(ModalComponent, {
-      environmentInjector: childInjector
+    const component = createComponent(ModalComponent, {
+      environmentInjector: childInjector,
+      elementInjector: this.injector
     });
     modalRef.close = (result) => {
       component.instance.close.emit(result)

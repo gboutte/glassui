@@ -46,6 +46,9 @@ export class ModalService {
       environmentInjector: childInjector,
       elementInjector: this.injector
     });
+
+    this.applicationRef.attachView(component.hostView);
+
     modalRef.close = (result) => {
       component.instance.close.emit(result)
     }
@@ -55,6 +58,7 @@ export class ModalService {
       component.instance.closeAnimation();
       //Delay the destroy to allow the animation to finish (200ms)
       setTimeout(() => {
+        this.applicationRef.detachView(component.hostView); 
       component.destroy();
       }, 100);
     });

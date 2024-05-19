@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import {FormControl} from "@angular/forms";
 
 @Component({
   selector: 'gd-input-example',
@@ -7,4 +8,9 @@ import { Component } from '@angular/core';
 })
 export class InputExampleComponent {
   inputValue = 'Input value';
+
+  formControlInputValue = new FormControl('Form control input value');
+  constructor() {
+    this.formControlInputValue.disable();
+  }
 }

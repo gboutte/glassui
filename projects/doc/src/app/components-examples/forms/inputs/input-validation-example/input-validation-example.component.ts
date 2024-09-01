@@ -14,6 +14,7 @@ export class InputValidationExampleComponent {
   markAsInvalid() {
     this.inputMarkedInvalid.setErrors({invalid: true});
     this.inputShowError.setErrors({myError: "This is my error", anotherError: "This is another error"});
+    this.inputWithRequired.updateValueAndValidity();
   }
 
   markAsValid() {

@@ -8,8 +8,8 @@ describe('InputValidationExampleComponent', () => {
 
   beforeEach(() => {
     TestBed.configureTestingModule({
-      declarations: [CheckboxValidationExampleComponent]
-    });
+    imports: [CheckboxValidationExampleComponent]
+});
     fixture = TestBed.createComponent(CheckboxValidationExampleComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();

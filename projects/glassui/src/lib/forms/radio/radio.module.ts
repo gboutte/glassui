@@ -5,16 +5,14 @@ import {FormsModule, ReactiveFormsModule} from "@angular/forms";
 
 
 @NgModule({
-  declarations: [
-    RadioComponent
-  ],
-  imports: [
-    CommonModule,
-    ReactiveFormsModule
-  ],
-  exports: [
-    RadioComponent
-  ]
+    imports: [
+        CommonModule,
+        ReactiveFormsModule,
+        RadioComponent
+    ],
+    exports: [
+        RadioComponent
+    ]
 })
 export class RadioModule {
 }

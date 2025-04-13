@@ -1,13 +1,17 @@
 <div class="modal" [ngClass]="modalConfig.cssClasses" [class.closed]="closed">
-  <div class="modal-header"
-       *ngIf="modalConfig.title !== null && modalConfig.title !== undefined && modalConfig.title.length > 0">
-    {{modalConfig.title}}
-  </div>
-  <div class="close-icon" (click)="closeOverlay()" *ngIf="modalConfig.closeIcon">
-    <svg width="20px" height="20px" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-      <path d="M19 5L5 19M5 5L9.5 9.5M12 12L19 19" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
-    </svg>
-  </div>
+  @if (modalConfig.title !== null && modalConfig.title !== undefined && modalConfig.title.length > 0) {
+    <div class="modal-header"
+      >
+      {{modalConfig.title}}
+    </div>
+  }
+  @if (modalConfig.closeIcon) {
+    <div class="close-icon" (click)="closeOverlay()">
+      <svg width="20px" height="20px" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <path d="M19 5L5 19M5 5L9.5 9.5M12 12L19 19" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+      </svg>
+    </div>
+  }
   <div #content></div>
 </div>
 <div class="overlay" [class.closed]="closed" (click)="closeOverlay()"></div>

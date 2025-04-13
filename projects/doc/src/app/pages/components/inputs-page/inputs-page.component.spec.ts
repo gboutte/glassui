@@ -8,8 +8,8 @@ describe('InputsPageComponent', () => {
 
   beforeEach(() => {
     TestBed.configureTestingModule({
-      declarations: [InputsPageComponent]
-    });
+    imports: [InputsPageComponent]
+});
     fixture = TestBed.createComponent(InputsPageComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();

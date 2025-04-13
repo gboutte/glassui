@@ -1,11 +1,4 @@
-import {
-  ApplicationRef, ComponentFactory, ComponentFactoryResolver, createComponent,
-  createEnvironmentInjector, EmbeddedViewRef, Inject,
-  Injectable, Injector,
-  NgModuleRef,
-  Type,
-  ViewContainerRef
-} from "@angular/core";
+import { ApplicationRef, ComponentFactory, ComponentFactoryResolver, createComponent, createEnvironmentInjector, EmbeddedViewRef, Injectable, Injector, NgModuleRef, Type, ViewContainerRef, inject } from "@angular/core";
 import {ModalComponent} from "./components/modal/modal.component";
 import {Observable} from "rxjs";
 import {ModalConfig} from "./modal-config";
@@ -17,14 +10,14 @@ import {DOCUMENT} from "@angular/common";
 
 @Injectable()
 export class ModalService {
+  private applicationRef = inject(ApplicationRef);
+  private injector = inject(Injector);
+  private document = inject<Document>(DOCUMENT);
+
 
   private viewContainerRef!: ViewContainerRef;
 
-  constructor(
-    private applicationRef: ApplicationRef,
-    private injector: Injector,
-    @Inject(DOCUMENT) private document: Document
-  ) {
+  constructor() {
     this.viewContainerRef = this.applicationRef.components[0].injector.get(ViewContainerRef);
 
   }

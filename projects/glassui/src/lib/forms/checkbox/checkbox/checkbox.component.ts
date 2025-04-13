@@ -1,12 +1,16 @@
-import {Component, Input, OnInit, Optional, Self} from '@angular/core';
-import {ControlValueAccessor, FormControl, NgControl} from "@angular/forms";
+import { Component, Input, OnInit, inject } from '@angular/core';
+import { ControlValueAccessor, FormControl, NgControl, ReactiveFormsModule } from "@angular/forms";
+
 
 @Component({
-  selector: 'gl-checkbox',
-  templateUrl: './checkbox.component.html',
-  styleUrls: ['./checkbox.component.scss']
+    selector: 'gl-checkbox',
+    templateUrl: './checkbox.component.html',
+    styleUrls: ['./checkbox.component.scss'],
+    imports: [ReactiveFormsModule]
 })
 export class CheckboxComponent  implements ControlValueAccessor, OnInit {
+  private ngControl = inject(NgControl, { optional: true, self: true });
+
   @Input() label?: string;
   @Input() showErrors: boolean = false;
 
@@ -16,7 +20,7 @@ export class CheckboxComponent  implements ControlValueAccessor, OnInit {
   inputId: string;
   control: FormControl = new FormControl<boolean>(false);
   touched: boolean = false;
-  constructor(@Optional() @Self() private ngControl: NgControl) {
+  constructor() {
     if (this.ngControl) this.ngControl.valueAccessor = this;
     this.inputId = 'glassui-checkbox-' + Math.floor(Math.random() * 999999999);
   }

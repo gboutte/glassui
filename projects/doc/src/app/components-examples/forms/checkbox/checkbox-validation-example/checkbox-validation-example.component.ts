@@ -1,10 +1,13 @@
 import {Component, OnInit} from '@angular/core';
-import {FormControl, Validators} from "@angular/forms";
+import { FormControl, Validators, ReactiveFormsModule } from "@angular/forms";
+import { CheckboxComponent } from '../../../../../../../glassui/src/lib/forms/checkbox/checkbox/checkbox.component';
+import { ButtonComponent } from '../../../../../../../glassui/src/lib/buttons/button/button.component';
 
 @Component({
-  selector: 'gd-checkbox-validation-example',
-  templateUrl: './checkbox-validation-example.component.html',
-  styleUrls: ['./checkbox-validation-example.component.scss']
+    selector: 'gd-checkbox-validation-example',
+    templateUrl: './checkbox-validation-example.component.html',
+    styleUrls: ['./checkbox-validation-example.component.scss'],
+    imports: [CheckboxComponent, ReactiveFormsModule, ButtonComponent]
 })
 export class CheckboxValidationExampleComponent {
   inputWithRequired: FormControl = new FormControl('', Validators.requiredTrue);

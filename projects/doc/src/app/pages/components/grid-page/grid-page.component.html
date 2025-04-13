@@ -2,12 +2,16 @@
   <h1>Grid</h1>
   All columns class:
   <ul>
-    <li *ngFor="let item of [].constructor(12); let i = index">col-{{i+1}}</li>
+    @for (item of [].constructor(12); track item; let i = $index) {
+      <li>col-{{i+1}}</li>
+    }
   </ul>
 
   All gaps class:
   <ul>
-    <li *ngFor="let item of [].constructor(12); let i = index">gap-{{(i+1)*10}}</li>
+    @for (item of [].constructor(12); track item; let i = $index) {
+      <li>gap-{{(i+1)*10}}</li>
+    }
   </ul>
 
   <gd-code-snippet source="grid/grid-cols-example" [files]="['html']">

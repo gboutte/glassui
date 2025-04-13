@@ -1,13 +1,17 @@
-import {Component, Input, OnInit} from '@angular/core';
-import {HttpClient} from "@angular/common/http";
+import { Component, Input, OnInit, inject } from '@angular/core';
+import { HttpClient } from "@angular/common/http";
 import {Observable, shareReplay} from "rxjs";
 
+
 @Component({
-  selector: 'gd-code-snippet',
-  templateUrl: './code-snippet.component.html',
-  styleUrls: ['./code-snippet.component.scss']
+    selector: 'gd-code-snippet',
+    templateUrl: './code-snippet.component.html',
+    styleUrls: ['./code-snippet.component.scss'],
+    imports: []
 })
 export class CodeSnippetComponent implements OnInit {
+  private _http = inject(HttpClient);
+
 
   // The folder name of the component
   @Input() source: string | undefined;
@@ -17,9 +21,6 @@ export class CodeSnippetComponent implements OnInit {
   filesContent: { [key: string]: string } = {};
   currentCodeTab!: string;
   showCode = false;
-
-  constructor(private _http: HttpClient) {
-  }
 
   ngOnInit(): void {
 

@@ -6,15 +6,13 @@ import {ReactiveFormsModule} from "@angular/forms";
 
 
 @NgModule({
-  declarations: [
-    CheckboxComponent
-  ],
-  imports: [
-    CommonModule,
-    ReactiveFormsModule
-  ],
-  exports: [
-    CheckboxComponent
-  ]
+    imports: [
+        CommonModule,
+        ReactiveFormsModule,
+        CheckboxComponent
+    ],
+    exports: [
+        CheckboxComponent
+    ]
 })
 export class CheckboxModule { }

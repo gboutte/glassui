@@ -8,8 +8,8 @@ describe('CardsColorExampleComponent', () => {
 
   beforeEach(() => {
     TestBed.configureTestingModule({
-      declarations: [CardsColorExampleComponent]
-    });
+    imports: [CardsColorExampleComponent]
+});
     fixture = TestBed.createComponent(CardsColorExampleComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();

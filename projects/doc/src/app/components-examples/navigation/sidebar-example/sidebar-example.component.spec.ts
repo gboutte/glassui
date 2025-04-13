@@ -8,8 +8,8 @@ describe('SidebarExampleComponent', () => {
 
   beforeEach(() => {
     TestBed.configureTestingModule({
-      declarations: [SidebarExampleComponent]
-    });
+    imports: [SidebarExampleComponent]
+});
     fixture = TestBed.createComponent(SidebarExampleComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();

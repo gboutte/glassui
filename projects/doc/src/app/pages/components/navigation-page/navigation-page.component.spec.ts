@@ -8,8 +8,8 @@ describe('NavigationPageComponent', () => {
 
   beforeEach(() => {
     TestBed.configureTestingModule({
-      declarations: [NavigationPageComponent]
-    });
+    imports: [NavigationPageComponent]
+});
     fixture = TestBed.createComponent(NavigationPageComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();

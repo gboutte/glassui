@@ -9,22 +9,20 @@ import { PageComponent } from './page/page.component';
 
 
 @NgModule({
-  declarations: [
-    SidebarComponent,
-    NavbarComponent,
-    PageComponent,
-  ],
-  imports: [
-    CommonModule,
-    ButtonsModule,
-    RouterLink,
-    ContentModule
-  ],
-  exports: [
-    SidebarComponent,
-    NavbarComponent,
-    PageComponent,
-  ]
+    imports: [
+        CommonModule,
+        ButtonsModule,
+        RouterLink,
+        ContentModule,
+        SidebarComponent,
+        NavbarComponent,
+        PageComponent
+    ],
+    exports: [
+        SidebarComponent,
+        NavbarComponent,
+        PageComponent,
+    ]
 })
 export class NavigationModule {
 }

@@ -2,39 +2,44 @@
 
   <div class="toast-container">
 
-    <div class="icon" *ngIf="icon !== null">
-      <svg class="icon-svg " xmlns="http://www.w3.org/2000/svg" viewBox="0 0 52 52" *ngIf="icon === 'success'">
-        <circle class="icon_circle" cx="26" cy="26" r="25" fill="none"/>
-        <path class="icon_path" fill="none" d="M14.1 27.2l7.1 7.2 16.7-16.8"/>
-      </svg>
-
-      <svg class="icon-svg  red" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"
-           *ngIf="icon === 'error'">
-        <circle class="icon_circle" cx="12" cy="12" r="11" fill="none"/>
-        <path d="M6 6L18 18" class="icon_path" stroke-linecap="round"/>
-        <path d="M18 6L6.00001 18" class="icon_path" stroke-linecap="round"/>
-      </svg>
-      <svg class="icon-svg  blue" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"
-           *ngIf="icon === 'info'">
-        <circle class="icon_circle" cx="12" cy="12" r="11" fill="none"/>
-        <path d="M12 7.00999L12 7M12 17L12 10" class="icon_path" stroke-width="1.5" stroke-linecap="round"
+    @if (icon !== null) {
+      <div class="icon">
+        @if (icon === 'success') {
+          <svg class="icon-svg " xmlns="http://www.w3.org/2000/svg" viewBox="0 0 52 52">
+            <circle class="icon_circle" cx="26" cy="26" r="25" fill="none"/>
+            <path class="icon_path" fill="none" d="M14.1 27.2l7.1 7.2 16.7-16.8"/>
+          </svg>
+        }
+        @if (icon === 'error') {
+          <svg class="icon-svg  red" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"
+            >
+            <circle class="icon_circle" cx="12" cy="12" r="11" fill="none"/>
+            <path d="M6 6L18 18" class="icon_path" stroke-linecap="round"/>
+            <path d="M18 6L6.00001 18" class="icon_path" stroke-linecap="round"/>
+          </svg>
+        }
+        @if (icon === 'info') {
+          <svg class="icon-svg  blue" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"
+            >
+            <circle class="icon_circle" cx="12" cy="12" r="11" fill="none"/>
+            <path d="M12 7.00999L12 7M12 17L12 10" class="icon_path" stroke-width="1.5" stroke-linecap="round"
               stroke-linejoin="round"/>
-
-      </svg>
-
-    </div>
+          </svg>
+        }
+      </div>
+    }
     <div class="content">
-      <ng-template [ngIf]="title !== undefined && title.length > 0">
+      @if (title !== undefined && title.length > 0) {
         <div class="title">
           {{title}}
         </div>
-      </ng-template>
+      }
 
-      <ng-template [ngIf]="description !== undefined && description.length > 0">
+      @if (description !== undefined && description.length > 0) {
         <div class="description">
           {{description}}
         </div>
-      </ng-template>
+      }
 
     </div>
   </div>

@@ -3,10 +3,12 @@
 
     <div class="menu-content">
       <ng-content></ng-content>
-      <ng-template [ngIf]="menu.length > 0">
-        <gl-button *ngFor="let bu of menu" [routerLink]="bu.link"
-                   [class.active]="isActivated(bu)">{{bu.label}}</gl-button>
-      </ng-template>
+      @if (menu.length > 0) {
+        @for (bu of menu; track bu) {
+          <gl-button [routerLink]="bu.link"
+          [class.active]="isActivated(bu)">{{bu.label}}</gl-button>
+        }
+      }
     </div>
 
   </gl-card>

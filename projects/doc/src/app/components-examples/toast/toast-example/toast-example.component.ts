@@ -1,16 +1,20 @@
-import { Component } from '@angular/core';
+import { Component, inject } from '@angular/core';
 import {ToastService} from "../../../../../../glassui/src/lib/toast/toast.service";
 import {Color} from "../../../../../../glassui/src/lib/shared/color.type";
+import { ButtonComponent } from '../../../../../../glassui/src/lib/buttons/button/button.component';
 
 @Component({
-  selector: 'gd-toast-example',
-  templateUrl: './toast-example.component.html',
-  styleUrls: ['./toast-example.component.scss']
+    selector: 'gd-toast-example',
+    templateUrl: './toast-example.component.html',
+    styleUrls: ['./toast-example.component.scss'],
+    imports: [ButtonComponent]
 })
 export class ToastExampleComponent {
 
   private toastService: ToastService;
-  constructor(toastService: ToastService) {
+  constructor() {
+    const toastService = inject(ToastService);
+
     this.toastService = toastService;
   }
 

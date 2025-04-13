@@ -17,23 +17,21 @@ import { ThemePageComponent } from './components/theme-page/theme-page.component
 
 
 @NgModule({
-  declarations: [
-    SetupPageComponent,
-    ButtonsPageComponent,
-    NavigationPageComponent,
-    InputsPageComponent,
-    ContentPageComponent,
-    ModalPageComponent,
-    GridPageComponent,
-    ThemePageComponent
-  ],
     imports: [
         CommonModule,
         PagesRoutingModule,
         SharedDocModule,
         ComponentsExamplesModule,
         GlassuiModule,
-      HighlightModule
+        HighlightModule,
+        SetupPageComponent,
+        ButtonsPageComponent,
+        NavigationPageComponent,
+        InputsPageComponent,
+        ContentPageComponent,
+        ModalPageComponent,
+        GridPageComponent,
+        ThemePageComponent
     ],
 })
 export class PagesModule { }

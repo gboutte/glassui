@@ -1,15 +1,17 @@
-import {Component, Input} from '@angular/core';
+import { Component, Input, inject } from '@angular/core';
 import {NavigationStore} from "../navigation.store";
 
 @Component({
-  selector: 'gl-page',
-  templateUrl: './page.component.html',
-  styleUrls: ['./page.component.scss']
+    selector: 'gl-page',
+    templateUrl: './page.component.html',
+    styleUrls: ['./page.component.scss']
 })
 export class PageComponent {
   navigationStore:NavigationStore;
   @Input() key: string = 'default';
-  constructor(navigationStore:NavigationStore) {
+  constructor() {
+    const navigationStore = inject(NavigationStore);
+
     this.navigationStore = navigationStore;
   }
 }

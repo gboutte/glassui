@@ -1,11 +1,14 @@
 import {Component} from '@angular/core';
 import {SelectOptionInterface} from "../../../../../../../glassui/src/lib/forms/selects/select-option.interface";
-import {FormControl} from "@angular/forms";
+import { FormControl, ReactiveFormsModule } from "@angular/forms";
+import { SelectComponent } from '../../../../../../../glassui/src/lib/forms/selects/select/select.component';
+import { CardComponent } from '../../../../../../../glassui/src/lib/content/card/card.component';
 
 @Component({
-  selector: 'gd-select-example',
-  templateUrl: './select-example.component.html',
-  styleUrls: ['./select-example.component.scss']
+    selector: 'gd-select-example',
+    templateUrl: './select-example.component.html',
+    styleUrls: ['./select-example.component.scss'],
+    imports: [SelectComponent, ReactiveFormsModule, CardComponent]
 })
 export class SelectExampleComponent {
 

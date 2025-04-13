@@ -1,10 +1,14 @@
 
 <div class="input" [class.invalid]="control.invalid">
-  <label [for]="inputId" *ngIf="label">{{label}}</label>
+  @if (label) {
+    <label [for]="inputId">{{label}}</label>
+  }
   <input [id]="inputId" [formControl]="control" [type]="type"/>
-  <ng-template [ngIf]="control.touched && errors.length > 0">
+  @if (control.touched && errors.length > 0) {
     <div class="errors">
-      <small class="error" *ngFor="let error of errors">{{error}}</small>
+      @for (error of errors; track error) {
+        <small class="error">{{error}}</small>
+      }
     </div>
-  </ng-template>
+  }
 </div>

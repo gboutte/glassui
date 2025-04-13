@@ -1,13 +1,13 @@
 import {Component, Input, OnInit, Optional, Self} from '@angular/core';
 import { ControlValueAccessor, FormControl, NgControl, ReactiveFormsModule } from "@angular/forms";
 import {SelectOptionInterface} from "../select-option.interface";
-import { NgIf, NgFor } from '@angular/common';
+
 
 @Component({
     selector: 'gl-select',
     templateUrl: './select.component.html',
     styleUrls: ['./select.component.scss'],
-    imports: [NgIf, ReactiveFormsModule, NgFor]
+    imports: [ReactiveFormsModule]
 })
 export class SelectComponent implements ControlValueAccessor, OnInit {
   @Input() label?: string;

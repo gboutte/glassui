@@ -1,12 +1,12 @@
 import {Component, Input, OnInit, Optional, Self} from '@angular/core';
 import { ControlValueAccessor, FormControl, NgControl, ReactiveFormsModule } from "@angular/forms";
-import { NgIf, NgFor } from '@angular/common';
+
 
 @Component({
     selector: 'gl-input',
     templateUrl: './input.component.html',
     styleUrls: ['./input.component.scss'],
-    imports: [NgIf, ReactiveFormsModule, NgFor]
+    imports: [ReactiveFormsModule]
 })
 export class InputComponent implements ControlValueAccessor, OnInit {
   @Input() label?: string;

@@ -1,13 +1,13 @@
 import {Component, Input, OnInit} from '@angular/core';
 import { HttpClient } from "@angular/common/http";
 import {Observable, shareReplay} from "rxjs";
-import { NgIf, NgFor } from '@angular/common';
+
 
 @Component({
     selector: 'gd-code-snippet',
     templateUrl: './code-snippet.component.html',
     styleUrls: ['./code-snippet.component.scss'],
-    imports: [NgIf, NgFor]
+    imports: []
 })
 export class CodeSnippetComponent implements OnInit {
 

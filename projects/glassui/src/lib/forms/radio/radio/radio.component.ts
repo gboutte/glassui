@@ -1,12 +1,12 @@
 import {Component, Input, OnInit, Optional, Self, ViewChild} from '@angular/core';
 import { ControlValueAccessor, FormControl, NgControl, ReactiveFormsModule } from "@angular/forms";
-import { NgIf, NgFor } from '@angular/common';
+
 
 @Component({
     selector: 'gl-radio',
     templateUrl: './radio.component.html',
     styleUrls: ['./radio.component.scss'],
-    imports: [ReactiveFormsModule, NgIf, NgFor]
+    imports: [ReactiveFormsModule]
 })
 export class RadioComponent implements ControlValueAccessor, OnInit {
   @Input() label?: string;

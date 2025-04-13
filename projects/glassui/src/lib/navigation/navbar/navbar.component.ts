@@ -1,4 +1,4 @@
-import {Component, Input, OnDestroy, OnInit} from '@angular/core';
+import { Component, Input, OnDestroy, OnInit, inject } from '@angular/core';
 import {NavigationStore} from "../navigation.store";
 import { CardComponent } from '../../content/card/card.component';
 
@@ -12,7 +12,9 @@ export class NavbarComponent implements OnInit, OnDestroy {
   navigationStore: NavigationStore;
   @Input() key: string = 'default';
 
-  constructor(navigationStore: NavigationStore) {
+  constructor() {
+    const navigationStore = inject(NavigationStore);
+
     this.navigationStore = navigationStore;
   }
 

@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, inject } from '@angular/core';
 import {ToastService} from "../../../../../../glassui/src/lib/toast/toast.service";
 import {Color} from "../../../../../../glassui/src/lib/shared/color.type";
 import { ButtonComponent } from '../../../../../../glassui/src/lib/buttons/button/button.component';
@@ -12,7 +12,9 @@ import { ButtonComponent } from '../../../../../../glassui/src/lib/buttons/butto
 export class ToastExampleComponent {
 
   private toastService: ToastService;
-  constructor(toastService: ToastService) {
+  constructor() {
+    const toastService = inject(ToastService);
+
     this.toastService = toastService;
   }
 

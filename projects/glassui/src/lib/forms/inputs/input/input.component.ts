@@ -1,4 +1,4 @@
-import {Component, Input, OnInit, Optional, Self} from '@angular/core';
+import { Component, Input, OnInit, inject } from '@angular/core';
 import { ControlValueAccessor, FormControl, NgControl, ReactiveFormsModule } from "@angular/forms";
 
 
@@ -9,6 +9,8 @@ import { ControlValueAccessor, FormControl, NgControl, ReactiveFormsModule } fro
     imports: [ReactiveFormsModule]
 })
 export class InputComponent implements ControlValueAccessor, OnInit {
+  private ngControl = inject(NgControl, { optional: true, self: true });
+
   @Input() label?: string;
   @Input() type: "text"|"password" = "text";
   @Input() showErrors: boolean = false;
@@ -19,7 +21,7 @@ export class InputComponent implements ControlValueAccessor, OnInit {
   control: FormControl = new FormControl<string>("");
   touched: boolean = false;
 
-  constructor(@Optional() @Self() private ngControl: NgControl) {
+  constructor() {
     if (this.ngControl) this.ngControl.valueAccessor = this;
     this.inputId = 'glassui-input-' + Math.floor(Math.random() * 999999999);
   }

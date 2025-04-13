@@ -1,4 +1,4 @@
-import {Component, Input, OnInit, Optional, Self, ViewChild} from '@angular/core';
+import { Component, Input, OnInit, ViewChild, inject } from '@angular/core';
 import { ControlValueAccessor, FormControl, NgControl, ReactiveFormsModule } from "@angular/forms";
 
 
@@ -9,6 +9,8 @@ import { ControlValueAccessor, FormControl, NgControl, ReactiveFormsModule } fro
     imports: [ReactiveFormsModule]
 })
 export class RadioComponent implements ControlValueAccessor, OnInit {
+  private ngControl = inject(NgControl, { optional: true, self: true });
+
   @Input() label?: string;
   @Input() radioGroup!: string;
   @Input() showErrors: boolean = false;
@@ -26,7 +28,7 @@ export class RadioComponent implements ControlValueAccessor, OnInit {
   inputId: string;
   control: FormControl = new FormControl<boolean>(false);
   touched: boolean = false;
-  constructor(@Optional() @Self() private ngControl: NgControl) {
+  constructor() {
     if (this.ngControl) this.ngControl.valueAccessor = this;
     this.inputId = 'glassui-radio-' + Math.floor(Math.random() * 999999999);
   }

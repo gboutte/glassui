@@ -1,4 +1,4 @@
-import {Component, Input, OnInit, Optional, Self} from '@angular/core';
+import { Component, Input, OnInit, inject } from '@angular/core';
 import { ControlValueAccessor, FormControl, NgControl, ReactiveFormsModule } from "@angular/forms";
 import {SelectOptionInterface} from "../select-option.interface";
 
@@ -10,6 +10,8 @@ import {SelectOptionInterface} from "../select-option.interface";
     imports: [ReactiveFormsModule]
 })
 export class SelectComponent implements ControlValueAccessor, OnInit {
+  private ngControl = inject(NgControl, { optional: true, self: true });
+
   @Input() label?: string;
   @Input() showErrors: boolean = false;
 
@@ -21,7 +23,7 @@ export class SelectComponent implements ControlValueAccessor, OnInit {
   control: FormControl = new FormControl<string>("");
   touched: boolean = false;
 
-  constructor(@Optional() @Self() private ngControl: NgControl) {
+  constructor() {
     if (this.ngControl) this.ngControl.valueAccessor = this;
     this.inputId = 'glassui-select-' + Math.floor(Math.random() * 999999999);
   }

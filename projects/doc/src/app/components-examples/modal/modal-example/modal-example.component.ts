@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, inject } from '@angular/core';
 import {ModalService} from "../../../../../../glassui/src/lib/modal/modal.service";
 import {ModalConfig} from "../../../../../../glassui/src/lib/modal/modal-config";
 import { ButtonComponent } from '../../../../../../glassui/src/lib/buttons/button/button.component';
@@ -14,7 +14,9 @@ import { ReactiveFormsModule, FormsModule } from '@angular/forms';
 export class ModalExampleComponent {
   private modalService:ModalService;
   data:string = "My data";
-  constructor(modalService:ModalService) {
+  constructor() {
+    const modalService = inject(ModalService);
+
     this.modalService = modalService;
   }
 
@@ -50,8 +52,12 @@ export class ContentExampleComponent {
     template: 'Data: {{textContent}}'
 })
 export class ContentExampleWithDataComponent {
+  private modalConfig = inject(ModalConfig);
+
   textContent:string;
-  constructor(private modalConfig: ModalConfig) {
+  constructor() {
+    const modalConfig = this.modalConfig;
+
     this.textContent = modalConfig.data.text;
     modalConfig.title = "A simple title"; // You can also change modal config here
     modalConfig.cssClasses?.push("my-custom-class"); // You can also add css classes here

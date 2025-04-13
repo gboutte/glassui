@@ -1,13 +1,14 @@
-import {ApplicationRef, Injectable, ViewContainerRef} from "@angular/core";
+import { ApplicationRef, Injectable, ViewContainerRef, inject } from "@angular/core";
 import {ToastComponent} from "./components/toast/toast.component";
 import {Color} from "../shared/color.type";
 
 @Injectable()
 export class ToastService {
+private applicationRef = inject(ApplicationRef);
+
 
 private viewContainerRef!: ViewContainerRef;
-  constructor(
-    private applicationRef: ApplicationRef) {
+  constructor() {
     this.viewContainerRef = this.applicationRef.components[0].injector.get(ViewContainerRef);
 
 

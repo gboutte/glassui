@@ -1,4 +1,4 @@
-import {Component, Input, OnDestroy, OnInit} from '@angular/core';
+import { Component, Input, OnDestroy, OnInit, inject } from '@angular/core';
 import {MenuModel} from "./menu.model";
 import { ActivatedRoute, NavigationEnd, Router, RouterLink } from "@angular/router";
 import {NavigationStore} from "../navigation.store";
@@ -13,11 +13,16 @@ import { ButtonComponent } from '../../buttons/button/button.component';
     imports: [CardComponent, ButtonComponent, RouterLink]
 })
 export class SidebarComponent implements OnInit,OnDestroy{
+  private router = inject(Router);
+
 
   @Input() menu: MenuModel[] = []
   @Input() key: string = 'default';
   navigationStore: NavigationStore;
-  constructor(navigationStore: NavigationStore,private router: Router) {
+  constructor() {
+    const navigationStore = inject(NavigationStore);
+    const router = this.router;
+
     this.navigationStore = navigationStore;
     router.events.subscribe((val) => {
       if(val instanceof NavigationEnd){

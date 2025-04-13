@@ -3,9 +3,10 @@ import {ToastService} from "../../../../../../glassui/src/lib/toast/toast.servic
 import {Color} from "../../../../../../glassui/src/lib/shared/color.type";
 
 @Component({
-  selector: 'gd-toast-example',
-  templateUrl: './toast-example.component.html',
-  styleUrls: ['./toast-example.component.scss']
+    selector: 'gd-toast-example',
+    templateUrl: './toast-example.component.html',
+    styleUrls: ['./toast-example.component.scss'],
+    standalone: false
 })
 export class ToastExampleComponent {
 

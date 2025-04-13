@@ -2,9 +2,10 @@ import { Component } from '@angular/core';
 import {FormControl} from "@angular/forms";
 
 @Component({
-  selector: 'gd-radio-example',
-  templateUrl: './radio-example.component.html',
-  styleUrls: ['./radio-example.component.scss']
+    selector: 'gd-radio-example',
+    templateUrl: './radio-example.component.html',
+    styleUrls: ['./radio-example.component.scss'],
+    standalone: false
 })
 export class RadioExampleComponent {
 

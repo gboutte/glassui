@@ -3,9 +3,10 @@ import { HttpClient } from "@angular/common/http";
 import {Observable, shareReplay} from "rxjs";
 
 @Component({
-  selector: 'gd-code-snippet',
-  templateUrl: './code-snippet.component.html',
-  styleUrls: ['./code-snippet.component.scss']
+    selector: 'gd-code-snippet',
+    templateUrl: './code-snippet.component.html',
+    styleUrls: ['./code-snippet.component.scss'],
+    standalone: false
 })
 export class CodeSnippetComponent implements OnInit {
 

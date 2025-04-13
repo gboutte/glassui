@@ -2,9 +2,10 @@ import {Component, OnInit} from '@angular/core';
 import {FormControl, Validators} from "@angular/forms";
 
 @Component({
-  selector: 'gd-input-validation-example',
-  templateUrl: './input-validation-example.component.html',
-  styleUrls: ['./input-validation-example.component.scss']
+    selector: 'gd-input-validation-example',
+    templateUrl: './input-validation-example.component.html',
+    styleUrls: ['./input-validation-example.component.scss'],
+    standalone: false
 })
 export class InputValidationExampleComponent {
   inputWithRequired: FormControl = new FormControl('', Validators.required);

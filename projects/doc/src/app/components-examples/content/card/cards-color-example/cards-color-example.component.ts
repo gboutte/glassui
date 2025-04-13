@@ -1,9 +1,10 @@
 import { Component } from '@angular/core';
 
 @Component({
-  selector: 'gd-cards-color-example',
-  templateUrl: './cards-color-example.component.html',
-  styleUrls: ['./cards-color-example.component.scss']
+    selector: 'gd-cards-color-example',
+    templateUrl: './cards-color-example.component.html',
+    styleUrls: ['./cards-color-example.component.scss'],
+    standalone: false
 })
 export class CardsColorExampleComponent {
 

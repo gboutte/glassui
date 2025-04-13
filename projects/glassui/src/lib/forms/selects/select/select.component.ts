@@ -3,9 +3,10 @@ import {ControlValueAccessor, FormControl, NgControl} from "@angular/forms";
 import {SelectOptionInterface} from "../select-option.interface";
 
 @Component({
-  selector: 'gl-select',
-  templateUrl: './select.component.html',
-  styleUrls: ['./select.component.scss']
+    selector: 'gl-select',
+    templateUrl: './select.component.html',
+    styleUrls: ['./select.component.scss'],
+    standalone: false
 })
 export class SelectComponent implements ControlValueAccessor, OnInit {
   @Input() label?: string;

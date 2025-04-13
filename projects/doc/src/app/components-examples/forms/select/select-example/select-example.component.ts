@@ -3,9 +3,10 @@ import {SelectOptionInterface} from "../../../../../../../glassui/src/lib/forms/
 import {FormControl} from "@angular/forms";
 
 @Component({
-  selector: 'gd-select-example',
-  templateUrl: './select-example.component.html',
-  styleUrls: ['./select-example.component.scss']
+    selector: 'gd-select-example',
+    templateUrl: './select-example.component.html',
+    styleUrls: ['./select-example.component.scss'],
+    standalone: false
 })
 export class SelectExampleComponent {
 

@@ -4,9 +4,10 @@ import {ActivatedRoute, NavigationEnd, Router} from "@angular/router";
 import {NavigationStore} from "../navigation.store";
 
 @Component({
-  selector: 'gl-sidebar',
-  templateUrl: './sidebar.component.html',
-  styleUrls: ['./sidebar.component.scss']
+    selector: 'gl-sidebar',
+    templateUrl: './sidebar.component.html',
+    styleUrls: ['./sidebar.component.scss'],
+    standalone: false
 })
 export class SidebarComponent implements OnInit,OnDestroy{
 

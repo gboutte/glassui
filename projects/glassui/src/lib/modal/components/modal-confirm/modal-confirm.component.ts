@@ -4,9 +4,10 @@ import {ModalConfirmConfig} from "../../modal-confirm-config";
 import {ModalRef} from "../../modal-ref";
 
 @Component({
-  selector: 'gl-modal-confirm',
-  templateUrl: './modal-confirm.component.html',
-  styleUrls: ['./modal-confirm.component.scss']
+    selector: 'gl-modal-confirm',
+    templateUrl: './modal-confirm.component.html',
+    styleUrls: ['./modal-confirm.component.scss'],
+    standalone: false
 })
 export class ModalConfirmComponent {
   confirmConfig: ModalConfirmConfig;

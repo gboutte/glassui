@@ -12,9 +12,10 @@ import {
 import {ModalConfig} from "../../modal-config";
 
 @Component({
-  selector: 'gl-modal',
-  templateUrl: './modal.component.html',
-  styleUrls: ['./modal.component.scss']
+    selector: 'gl-modal',
+    templateUrl: './modal.component.html',
+    styleUrls: ['./modal.component.scss'],
+    standalone: false
 })
 export class ModalComponent implements OnInit,OnDestroy {
   @Input() componentContent!: Type<any>;

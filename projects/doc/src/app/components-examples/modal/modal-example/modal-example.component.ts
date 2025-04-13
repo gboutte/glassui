@@ -3,9 +3,10 @@ import {ModalService} from "../../../../../../glassui/src/lib/modal/modal.servic
 import {ModalConfig} from "../../../../../../glassui/src/lib/modal/modal-config";
 
 @Component({
-  selector: 'gd-modal-example',
-  templateUrl: './modal-example.component.html',
-  styleUrls: ['./modal-example.component.scss']
+    selector: 'gd-modal-example',
+    templateUrl: './modal-example.component.html',
+    styleUrls: ['./modal-example.component.scss'],
+    standalone: false
 })
 export class ModalExampleComponent {
   private modalService:ModalService;
@@ -33,8 +34,9 @@ export class ModalExampleComponent {
 }
 
 @Component({
-  selector: 'gd-content-example',
-  template: 'My content',
+    selector: 'gd-content-example',
+    template: 'My content',
+    standalone: false
 })
 export class ContentExampleComponent {
   constructor() {
@@ -42,8 +44,9 @@ export class ContentExampleComponent {
 }
 
 @Component({
-  selector: 'gd-content-example-with-data',
-  template: 'Data: {{textContent}}',
+    selector: 'gd-content-example-with-data',
+    template: 'Data: {{textContent}}',
+    standalone: false
 })
 export class ContentExampleWithDataComponent {
   textContent:string;

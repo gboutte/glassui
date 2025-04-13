@@ -1,9 +1,10 @@
 import { Component } from '@angular/core';
 
 @Component({
-  selector: 'gd-theme-page',
-  templateUrl: './theme-page.component.html',
-  styleUrls: ['./theme-page.component.scss']
+    selector: 'gd-theme-page',
+    templateUrl: './theme-page.component.html',
+    styleUrls: ['./theme-page.component.scss'],
+    standalone: false
 })
 export class ThemePageComponent {
   themeStyle = "\n" +

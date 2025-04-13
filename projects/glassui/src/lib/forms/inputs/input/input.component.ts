@@ -2,9 +2,10 @@ import {Component, Input, OnInit, Optional, Self} from '@angular/core';
 import {ControlValueAccessor, FormControl, NgControl} from "@angular/forms";
 
 @Component({
-  selector: 'gl-input',
-  templateUrl: './input.component.html',
-  styleUrls: ['./input.component.scss']
+    selector: 'gl-input',
+    templateUrl: './input.component.html',
+    styleUrls: ['./input.component.scss'],
+    standalone: false
 })
 export class InputComponent implements ControlValueAccessor, OnInit {
   @Input() label?: string;

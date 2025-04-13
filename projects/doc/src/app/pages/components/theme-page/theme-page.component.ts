@@ -1,10 +1,12 @@
 import { Component } from '@angular/core';
+import { CardComponent } from '../../../../../../glassui/src/lib/content/card/card.component';
+import { Highlight } from 'ngx-highlightjs';
 
 @Component({
     selector: 'gd-theme-page',
     templateUrl: './theme-page.component.html',
     styleUrls: ['./theme-page.component.scss'],
-    standalone: false
+    imports: [CardComponent, Highlight]
 })
 export class ThemePageComponent {
   themeStyle = "\n" +

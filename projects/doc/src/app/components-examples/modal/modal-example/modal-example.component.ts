@@ -1,12 +1,15 @@
 import { Component } from '@angular/core';
 import {ModalService} from "../../../../../../glassui/src/lib/modal/modal.service";
 import {ModalConfig} from "../../../../../../glassui/src/lib/modal/modal-config";
+import { ButtonComponent } from '../../../../../../glassui/src/lib/buttons/button/button.component';
+import { InputComponent } from '../../../../../../glassui/src/lib/forms/inputs/input/input.component';
+import { ReactiveFormsModule, FormsModule } from '@angular/forms';
 
 @Component({
     selector: 'gd-modal-example',
     templateUrl: './modal-example.component.html',
     styleUrls: ['./modal-example.component.scss'],
-    standalone: false
+    imports: [ButtonComponent, InputComponent, ReactiveFormsModule, FormsModule]
 })
 export class ModalExampleComponent {
   private modalService:ModalService;
@@ -35,8 +38,7 @@ export class ModalExampleComponent {
 
 @Component({
     selector: 'gd-content-example',
-    template: 'My content',
-    standalone: false
+    template: 'My content'
 })
 export class ContentExampleComponent {
   constructor() {
@@ -45,8 +47,7 @@ export class ContentExampleComponent {
 
 @Component({
     selector: 'gd-content-example-with-data',
-    template: 'Data: {{textContent}}',
-    standalone: false
+    template: 'Data: {{textContent}}'
 })
 export class ContentExampleWithDataComponent {
   textContent:string;

@@ -8,8 +8,8 @@ describe('GridColsComponent', () => {
 
   beforeEach(() => {
     TestBed.configureTestingModule({
-      declarations: [GridColsExampleComponent]
-    });
+    imports: [GridColsExampleComponent]
+});
     fixture = TestBed.createComponent(GridColsExampleComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();

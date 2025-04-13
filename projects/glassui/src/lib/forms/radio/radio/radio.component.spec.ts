@@ -8,8 +8,8 @@ describe('RadioComponent', () => {
 
   beforeEach(() => {
     TestBed.configureTestingModule({
-      declarations: [RadioComponent]
-    });
+    imports: [RadioComponent]
+});
     fixture = TestBed.createComponent(RadioComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();

@@ -1,11 +1,12 @@
 import {Component, Input, OnDestroy, OnInit} from '@angular/core';
 import {NavigationStore} from "../navigation.store";
+import { CardComponent } from '../../content/card/card.component';
 
 @Component({
     selector: 'gl-navbar',
     templateUrl: './navbar.component.html',
     styleUrls: ['./navbar.component.scss'],
-    standalone: false
+    imports: [CardComponent]
 })
 export class NavbarComponent implements OnInit, OnDestroy {
   navigationStore: NavigationStore;

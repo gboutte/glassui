@@ -1,11 +1,12 @@
 import {Component, Input, OnInit, Optional, Self} from '@angular/core';
-import {ControlValueAccessor, FormControl, NgControl} from "@angular/forms";
+import { ControlValueAccessor, FormControl, NgControl, ReactiveFormsModule } from "@angular/forms";
+import { NgIf, NgFor } from '@angular/common';
 
 @Component({
     selector: 'gl-checkbox',
     templateUrl: './checkbox.component.html',
     styleUrls: ['./checkbox.component.scss'],
-    standalone: false
+    imports: [ReactiveFormsModule, NgIf, NgFor]
 })
 export class CheckboxComponent  implements ControlValueAccessor, OnInit {
   @Input() label?: string;

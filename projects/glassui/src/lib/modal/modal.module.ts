@@ -6,17 +6,15 @@ import {ModalConfirmComponent} from './components/modal-confirm/modal-confirm.co
 import {ButtonsModule} from "../buttons/buttons.module";
 
 @NgModule({
-  declarations: [
-    ModalComponent,
-    ModalConfirmComponent
-  ],
-  imports: [
-    CommonModule,
-    ButtonsModule
-  ],
-  providers: [
-    ModalService,
-  ],
+    imports: [
+        CommonModule,
+        ButtonsModule,
+        ModalComponent,
+        ModalConfirmComponent
+    ],
+    providers: [
+        ModalService,
+    ],
 })
 export class ModalModule {
 }

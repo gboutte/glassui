@@ -1,11 +1,12 @@
 import {Component, Input} from '@angular/core';
 import {Color} from "../../shared/color.type";
+import { NgClass } from '@angular/common';
 
 @Component({
     selector: 'gl-card',
     templateUrl: './card.component.html',
     styleUrls: ['./card.component.scss'],
-    standalone: false
+    imports: [NgClass]
 })
 export class CardComponent {
   @Input() color:Color = "white";

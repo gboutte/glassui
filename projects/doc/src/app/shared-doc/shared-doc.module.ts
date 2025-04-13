@@ -6,11 +6,9 @@ import {RouterLink} from "@angular/router";
 
 
 
-@NgModule({ declarations: [
-        CodeSnippetComponent,
-    ],
+@NgModule({
     exports: [
         CodeSnippetComponent,
     ], imports: [CommonModule,
-        RouterLink], providers: [provideHttpClient(withInterceptorsFromDi())] })
+        RouterLink, CodeSnippetComponent], providers: [provideHttpClient(withInterceptorsFromDi())] })
 export class SharedDocModule { }

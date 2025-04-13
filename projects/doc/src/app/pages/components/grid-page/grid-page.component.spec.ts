@@ -8,8 +8,8 @@ describe('GridPageComponent', () => {
 
   beforeEach(() => {
     TestBed.configureTestingModule({
-      declarations: [GridPageComponent]
-    });
+    imports: [GridPageComponent]
+});
     fixture = TestBed.createComponent(GridPageComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();

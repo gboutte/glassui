@@ -8,8 +8,8 @@ describe('GridColsResponsiveExampleComponent', () => {
 
   beforeEach(() => {
     TestBed.configureTestingModule({
-      declarations: [GridColsResponsiveExampleComponent]
-    });
+    imports: [GridColsResponsiveExampleComponent]
+});
     fixture = TestBed.createComponent(GridColsResponsiveExampleComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();

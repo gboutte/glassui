@@ -1,10 +1,13 @@
 import { Component } from '@angular/core';
+import { CardComponent } from '../../../../../../glassui/src/lib/content/card/card.component';
+import { Highlight } from 'ngx-highlightjs';
+import { RouterLink } from '@angular/router';
 
 @Component({
     selector: 'app-setup-page',
     templateUrl: './setup-page.component.html',
     styleUrls: ['./setup-page.component.scss'],
-    standalone: false
+    imports: [CardComponent, Highlight, RouterLink]
 })
 export class SetupPageComponent {
   themeConfig = '{\n' +

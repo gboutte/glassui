@@ -8,8 +8,8 @@ describe('SetupPageComponent', () => {
 
   beforeEach(() => {
     TestBed.configureTestingModule({
-      declarations: [SetupPageComponent]
-    });
+    imports: [SetupPageComponent]
+});
     fixture = TestBed.createComponent(SetupPageComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();

@@ -1,11 +1,13 @@
 import {Component, OnInit} from '@angular/core';
-import {FormControl, Validators} from "@angular/forms";
+import { FormControl, Validators, ReactiveFormsModule } from "@angular/forms";
+import { InputComponent } from '../../../../../../../glassui/src/lib/forms/inputs/input/input.component';
+import { ButtonComponent } from '../../../../../../../glassui/src/lib/buttons/button/button.component';
 
 @Component({
     selector: 'gd-input-validation-example',
     templateUrl: './input-validation-example.component.html',
     styleUrls: ['./input-validation-example.component.scss'],
-    standalone: false
+    imports: [InputComponent, ReactiveFormsModule, ButtonComponent]
 })
 export class InputValidationExampleComponent {
   inputWithRequired: FormControl = new FormControl('', Validators.required);

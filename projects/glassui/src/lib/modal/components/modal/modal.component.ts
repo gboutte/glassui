@@ -10,12 +10,13 @@ import {
   ViewContainerRef
 } from '@angular/core';
 import {ModalConfig} from "../../modal-config";
+import { NgClass, NgIf } from '@angular/common';
 
 @Component({
     selector: 'gl-modal',
     templateUrl: './modal.component.html',
     styleUrls: ['./modal.component.scss'],
-    standalone: false
+    imports: [NgClass, NgIf]
 })
 export class ModalComponent implements OnInit,OnDestroy {
   @Input() componentContent!: Type<any>;

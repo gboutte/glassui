@@ -8,8 +8,8 @@ describe('CardsTransparencyExampleComponent', () => {
 
   beforeEach(() => {
     TestBed.configureTestingModule({
-      declarations: [CardsTransparencyExampleComponent]
-    });
+    imports: [CardsTransparencyExampleComponent]
+});
     fixture = TestBed.createComponent(CardsTransparencyExampleComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();

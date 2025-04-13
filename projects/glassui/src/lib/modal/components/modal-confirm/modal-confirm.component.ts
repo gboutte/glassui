@@ -2,12 +2,13 @@ import {Component} from '@angular/core';
 import {ModalConfig} from "../../modal-config";
 import {ModalConfirmConfig} from "../../modal-confirm-config";
 import {ModalRef} from "../../modal-ref";
+import { ButtonComponent } from '../../../buttons/button/button.component';
 
 @Component({
     selector: 'gl-modal-confirm',
     templateUrl: './modal-confirm.component.html',
     styleUrls: ['./modal-confirm.component.scss'],
-    standalone: false
+    imports: [ButtonComponent]
 })
 export class ModalConfirmComponent {
   confirmConfig: ModalConfirmConfig;
